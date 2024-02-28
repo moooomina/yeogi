@@ -1,0 +1,109 @@
+@charset "UTF-8";
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 0;
+}
+main .trip_holic_bg {
+  width: 60%;
+  margin: 0 auto;
+}
+main .trip_holic_bg img {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+main .trip_holic_notice {
+  width: 60%;
+  margin: 0 auto;
+  background-color: #393939;
+  color: #fff;
+  font-size: 0.688rem;
+  padding: 0 22px 22px 22px;
+  text-align: left;
+}
+main .trip_holic_notice p {
+  color: #fff;
+}
+main .trip_holic_notice li {
+  color: #fff;
+}
+main .trip_holic_notice .notice_top {
+  margin-bottom: 32px;
+  padding: 26px 8px;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.15);
+  cursor: pointer;
+}
+main .trip_holic_notice .notice_top label {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+main .trip_holic_notice .notice_top label img[src*=info] {
+  width: 16px;
+  height: 16px;
+}
+main .trip_holic_notice .notice_top label span {
+  font-size: 1.3rem;
+  padding: 2px 10px 0 5px;
+  color: #fff;
+}
+main .trip_holic_notice .notice_top label #more_btn > img {
+  width: 16px;
+  height: auto;
+}
+main .trip_holic_notice .notice_more {
+  padding-bottom: 138px;
+}
+main .trip_holic_notice .notice_more .box h1 {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin: 13px 0 8px;
+  padding: 0 11px;
+}
+main .trip_holic_notice .notice_more .box h1::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 15px;
+  background-color: #fff;
+  margin-right: 3px;
+}
+main .trip_holic_notice .notice_more .box h1::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 15px;
+  background-color: #fff;
+  margin-left: 3px;
+}
+main .trip_holic_notice .notice_more .box ul {
+  margin: 11px 0 30px;
+  position: relative;
+}
+main .trip_holic_notice .notice_more .box ul li {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: #fff;
+  text-align: left;
+  margin-bottom: 5.5px;
+  padding: 0 11px;
+}
+main .trip_holic_notice .notice_more .box ul li ol li {
+  color: #fff;
+}
+main .trip_holic_notice .notice_more .box ul li a {
+  color: #fff;
+}
+main .trip_holic_notice .notice_more .box ul > li::before {
+  content: "·";
+  display: block;
+  color: #fff;
+  margin-right: 10px;
+}/*# sourceMappingURL=footer_event.css.map */

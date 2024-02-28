@@ -1,0 +1,20 @@
+/* * {transition: all 1s;} */
+
+@media screen and (max-width:1399px){
+}
+@media screen and (max-width:1200px){
+    main .business_inquiry_container {width:60%; margin-bottom:30px;}
+    main .new_inquiries_container {width:60%; padding:0 20px;}
+}
+@media screen and (max-width:900px){
+    main .business_inquiry_container {width:100%; margin-bottom:30px;}
+    main .new_inquiries_container {width:100%; padding:0 20px;}
+    main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_more .personal_info tbody tr td:first-child {
+        white-space:normal;
+    }
+    main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_more .personal_info tbody tr td {
+        white-space: nowrap;
+    }
+}
+@media screen and (max-width:600px){
+}

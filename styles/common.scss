@@ -1,0 +1,127 @@
+// color 변수 모음
+
+// mainColor
+$mainColor-r:#f7323f;
+$mainColor-b:#1273e4;
+$mainColor-w:#ffffff;
+
+// subColor
+$subColor-r:#f45858; // 강조색
+$subColor-ip:#f5f5f5; // input 비활성화
+$subColor-btn:#fafafa; // button 비활성화
+
+//====================================
+//정렬
+
+$margin0: 0 auto;
+$text-c: center;
+$text-r: right;
+$text-l: left;
+
+
+//====================================
+// 미디어쿼리
+
+$desktop: 1400px;
+$notebook: 1200px;
+$tablet: 900px;
+$phone: 600px;
+
+//====================================
+// font-size
+
+$title32: 2rem;
+$title24: 1.5rem;
+$title20: 1.25rem;
+$title18: 1.125rem;
+$defalt16: 1rem;
+$subT15: 0.938rem;
+$subC14: 0.875rem;
+$small13: 0.813rem;
+$small12: 0.75rem;
+$small11: 0.688rem;
+
+//=====================================
+// font-weight
+
+$weight400: 400;
+$weight500: 500;
+$weight600: 600;
+$weight700: 700;
+
+//=====================================
+// font-family
+
+$familyExtraBold: PretendardExtraBold;
+$familyBold: PretendardBold;
+$familySemiBold: PretendardSemiBold;
+$familyMedium: PretendardMedium;
+$familyRegular: PretendardRegular;
+$familyLight: PretendardLight;
+
+//=====================================
+// flex 변수 모음
+// 규칙: flex-정렬/줄바꿈/메인축/교차축 앞글자
+
+@mixin flex-rnsc {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-rwsc {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-cnsc {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-cncf {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@mixin flex-cwff {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+@mixin flex-rwff {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+@mixin flex-rwfc {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin flex-rnfc {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin flex-rncc {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}

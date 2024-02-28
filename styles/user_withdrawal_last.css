@@ -1,0 +1,74 @@
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+main section {
+  width: 30%;
+  margin: 0 auto;
+  padding: 20px 0 56px;
+}
+main section h1 {
+  font-size: 2rem;
+  font-family: PretendardBold;
+}
+main section img {
+  width: 400px;
+  height: auto;
+  margin: 50px auto 20px;
+}
+main section .link {
+  text-align: center;
+  display: block;
+  background-color: #1273e4;
+  color: #fff;
+  width: 100%;
+  line-height: 48px;
+  height: 48px;
+  padding: 0 18px;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 10px;
+}
+main section .popup_bg {
+  background: rgba(0, 0, 0, 0.48);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+main section .popup_bg .contents {
+  padding: 30px 20px 20px;
+  width: 335px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.0784313725);
+  overflow-y: hidden;
+  margin: 0 auto;
+}
+main section .popup_bg .contents h2 {
+  font-size: 1.125rem;
+  font-family: PretendardBold;
+}
+main section .popup_bg .contents p {
+  margin: 20px 0;
+  font-family: PretendardMedium;
+}
+main section .popup_bg .contents a {
+  text-align: center;
+  display: block;
+  background-color: #1273e4;
+  color: #fff;
+  width: 100%;
+  line-height: 48px;
+  height: 48px;
+  padding: 0 18px;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 10px;
+}/*# sourceMappingURL=user_withdrawal_last.css.map */

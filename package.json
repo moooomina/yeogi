@@ -1,0 +1,15 @@
+{
+  "name": "project_yeogi",
+  "version": "1.0.0",
+  "description": "* 02/01 작업 내용\r 1. 홈페이지 확정 : 여기어때\r 2. 역할분담 : 발표(일혁),메인서기(민아),서브서기(은지),발표자료(다은)\r 3. 오늘 작업한 내용\r - 일혁: 홈페이지 구성파악 및 사이트맵\r - 다은: 동적기능 정리 및 사용할 API사이트 정리\r - 민아: 스타일가이드 작업\r - 은지: 홈페이지 이미지 다운 및 페이지 캡쳐 및 이미지 class 만들기",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.70.0"
+  }
+}

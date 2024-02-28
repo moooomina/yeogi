@@ -1,0 +1,115 @@
+@media screen and (max-width: 899px) {
+  main {
+    margin: 0 auto;
+    max-width: 900px;
+  }
+  main .container {
+    width: 100%;
+  }
+  main .container .contents .time .center .clock .box {
+    max-height: 90px;
+    max-width: 15px;
+  }
+  main .container .contents .time .center .clock .box .clock_name {
+    top: -62px;
+    transform: translateX(50%);
+    color: #fff;
+    font-size: 0.938rem;
+  }
+  main .container .contents .time .center .clock .box .display {
+    left: 5px;
+    width: 7px;
+    height: 7px;
+  }
+  main .container .contents .time .center .clock .box .clock_top {
+    top: 10px;
+  }
+  main .container .contents .time .center .clock .box .clock_bottom {
+    bottom: 25px;
+  }
+  main .container .contents .time .center .clock ul li {
+    font-size: 3.375rem;
+    width: 55px;
+    height: 85px;
+    line-height: 85px;
+  }
+  main .container .contents .time .center .day .box .clock_name {
+    right: -63px;
+  }
+  main .container .contents .time .center .hours .box .clock_name {
+    right: -58px;
+  }
+  main .container .contents .time .center .minutes .box .clock_name {
+    right: -50px;
+  }
+  main .container .contents .time .center .seoonds .box .clock_name {
+    right: -48px;
+  }
+  main .container .contents .swiper-container .swiper-wrapper {
+    padding-left: 30px;
+  }
+  main .container .contents .swiper-container .swiper-wrapper .swiper-slide a img {
+    width: 500px;
+    margin-right: 15px;
+  }
+}
+@media screen and (max-width: 599px) {
+  main {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  main .container {
+    width: 100%;
+  }
+  main .container .contents .time .center .clock .box {
+    max-height: 90px;
+    max-width: 15px;
+  }
+  main .container .contents .time .center .clock .box .clock_name {
+    top: -43px;
+    transform: translateX(50%);
+    color: #fff;
+    font-size: 0.813rem;
+  }
+  main .container .contents .time .center .clock .box .display {
+    left: 5px;
+    width: 7px;
+    height: 7px;
+  }
+  main .container .contents .time .center .clock .box .clock_top {
+    top: 10px;
+  }
+  main .container .contents .time .center .clock .box .clock_bottom {
+    bottom: 25px;
+  }
+  main .container .contents .time .center .clock ul li {
+    font-size: 2.375rem;
+    width: 40px;
+    height: 60px;
+    line-height: 60px;
+  }
+  main .container .contents .time .center .day .box .clock_name {
+    right: -51px;
+  }
+  main .container .contents .time .center .hours .box .clock_name {
+    right: -46px;
+  }
+  main .container .contents .time .center .minutes .box .clock_name {
+    right: -40px;
+  }
+  main .container .contents .time .center .seoonds .box .clock_name {
+    right: -37px;
+  }
+  main .container .contents .swiper-container .swiper-wrapper {
+    padding-left: 40px;
+  }
+  main .container .contents .swiper-container .swiper-wrapper .swiper-slide a img {
+    width: 300px;
+  }
+  main .footer .footer_contents .box h3 {
+    font-size: 0.813rem;
+  }
+  main .footer .footer_contents .box li {
+    font-size: 0.688rem;
+  }
+}/*# sourceMappingURL=event_best_sole2.css.map */

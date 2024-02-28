@@ -1,0 +1,237 @@
+@import 'common';
+
+main {
+    section {
+        max-width: $desktop;
+        margin: 0 auto 96px;
+        padding: 20px 0 0 23px;
+        .raw_tab {
+            position: relative;
+            margin: 0 40px;
+            @include flex-rnfc;
+            height: 52px;
+            border-bottom: 1px solid #f2f8ff;
+            .slider-container {
+                display: flex;
+                transition: transform 0.5s ease;
+                h2 {
+                    margin-right: 15px;
+                    padding: 16px 10px;
+                    a {
+                        font-weight: $weight700;
+                        color: #70706E;
+                        font-weight: $weight500;
+                    }
+                }
+                h2:first-of-type a {
+                    color:#1273e4;
+                    font-weight: $weight700;
+                }
+                span {
+                    position: absolute;
+                    width: 87px; height: 2px;
+                    left: 0; bottom: 0;
+                    background-color:#1273e4;
+                }
+            }
+        }
+        .raw_container {
+            .raw_c {
+                padding: 23px 40px 0;
+                .title {
+                    @include flex-rnsc;
+                    h1 {
+                        padding: 16px 0 20px;
+                        font-size: $title24;
+                        font-weight: $weight700;
+                    }
+                    .right {
+                        display: flex; flex-flow: row nowrap;
+                        align-items: center;
+                        > p {
+                            font-size: 0.8375rem;
+                            font-weight: $weight600;
+                            color: #999;
+                            padding-right: 16px;
+                            white-space:nowrap;
+                        }
+                        .period {
+                            width: 261px;
+                            @include flex-rnsc;
+                            cursor: pointer;
+                            min-height: 44px;
+                            padding: 0 8px 0 18px;
+                            background-color: #f5f5f5;
+                            border-radius: 8px;
+                            p {
+                                min-width: 40px;
+                                min-height: 40px;
+                                display: flex; align-items: center; justify-content: center;
+                                i[class*=down] {
+                                    color: #333;
+                                    width: 12px; height: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+                .contents {
+                    li {
+                        border-bottom: 1px solid #fafafa;
+                        .prev {
+                            height: 88px;
+                            line-height: 88px;
+                            color:#000008 ;
+                            padding: 0 38px 0 4px;
+                            overflow: hidden;
+                            @include flex-rnsc;
+                            h2 {
+                                font-size: 1.063rem; font-weight: $weight700;
+                                span {
+                                    color: #7c90a3;
+                                    margin-right: 10px;
+                                    @extend h2 ;
+                                }
+                            }
+                            p {
+                                
+                                i [class*=down] {
+                                    font-size: 20px;
+                                    color: #999;
+                                }
+                            }
+                        }
+                        .open {
+                            
+                            padding: 20px 16px;
+                            background-color: #fafafa;
+                            overflow: hidden;
+                            line-height: 26px;
+                            margin-bottom: 8px;
+                            color: #000000B8;
+                        }
+                    }
+                }
+            }
+            .personal_info {
+                .intent {
+                    padding: 20px 0 0;
+                    p {
+                        line-height: 52px;
+                        color: #000000B8;
+                    }
+                }
+                .major_container {
+                    .major_info {
+                        margin-bottom: 10px;
+                        padding: 1px;
+                        border: 1px solid #ccc;
+                        width: 100%;
+                        tbody {
+                            text-align: center; 
+                            tr {
+                                th {
+                                    background-color: #f5f7fa;
+                                    font-size:1.063rem ;
+                                    line-height: 21px;
+                                    color: #000000cc;
+                                    padding: 11px 0 9px;;
+                                    border: 1px solid #D6D6D6;
+                                    font-weight: $weight700;
+                                }
+                            }
+                            tr {
+                                td {
+                                    padding: 15px 12px 16px;
+                                    border: 1px solid #D6D6D6;
+                                    text-align: center;
+                                    vertical-align: top;
+                                    img {
+                                        height: 45px; width: 45px;
+                                        margin:0 auto 12px;
+                                        display: block;
+                                        text-align: center;
+                                    }
+                                    em {
+                                        color: #000;
+                                        font-weight: bold;
+                                        padding-bottom: 7px;
+                                        display: block;
+                                    }
+                                    p {
+                                        color: #0000008F;
+                                        line-height: 24px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                p {
+                    margin-bottom: 20px;
+                    color: #000000B8;
+                }
+            }
+            .raws {
+                li {
+                    border-bottom: 1px solid #fafafa;
+                    .prev {
+                        height: 88px;
+                        line-height: 88px;
+                        color:#000008 ;
+                        padding: 0 38px 0 4px;
+                        overflow: hidden;
+                        @include flex-rnsc;
+                        h2 {
+                            display: flex; align-items: center;
+                            font-size: 1.063rem; font-weight: $weight700;
+                            img {
+                                width: 32px; height:36px ;
+                                margin-right: 10px;
+                            }
+                        }
+                        p {
+                            
+                            i [class*=down] {
+                                font-size: 20px;
+                                color: #999;
+                            }
+                        }
+                    }
+                    .open {
+                        padding: 20px 16px;
+                        background-color: #fafafa;
+                        overflow: hidden;
+                        line-height: 26px;
+                        margin-bottom: 8px;
+                        color: #000000B8;
+                    }
+                }
+            }
+            .underage_policy {
+                .title {
+                    @include flex-cwff;
+                    p {
+                        margin: 20px 0;
+                        line-height: 27px;
+                        color: #0000008F;
+                    }
+                }
+            }
+            .contents_expression {
+                padding:24px 40px 0;
+                h1 {
+                    padding: 16px 0 20px;
+                    font-size: $title24;
+                    font-weight: $weight700;
+                }
+                .contents {
+                    margin-bottom: 20px;
+                    li {
+                        color: #0000008F;
+                    }
+                }
+            }
+        }
+    }
+}

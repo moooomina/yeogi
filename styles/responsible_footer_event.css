@@ -1,0 +1,15 @@
+/* * {transition: all 1s;} */
+
+@media screen and (max-width:1399px){
+}
+@media screen and (max-width:1200px){
+    main .trip_holic_bg {width:50%; margin:0 auto;}
+    main .trip_holic_notice {width:50%; margin:0 auto;}
+}
+@media screen and (max-width:900px){
+    main {padding:0;}
+    main .trip_holic_bg {width:100%; margin:0 auto;}
+    main .trip_holic_notice {width:100%; margin:0 auto;}
+}
+@media screen and (max-width:600px){
+}

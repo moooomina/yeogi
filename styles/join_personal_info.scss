@@ -1,0 +1,186 @@
+@import 'common';
+
+main {
+    max-width: $desktop;
+    margin: 0 auto;
+    section {
+        width: 30%; margin: 0 auto;
+        padding: 16px 0 20px;
+        #join_personal_frm {
+            fieldset {
+                .title {
+                    margin-bottom: 25px;
+                    h1 {
+                        font-size: $title24;
+                        font-weight: $weight700;
+                        margin-bottom: 10px;
+                    }
+                    p {color: #999;}
+                }
+                .contents {
+                    margin-bottom: 5px;
+                    .reset_btn {display: none;} // js
+                    // 공통선택자
+                    .user_info > div {
+                        margin-bottom: 20px;
+                        .sub_title {
+                            font-size: $small13; font-family: $familySemiBold;
+                            color: #707070;
+                            margin-bottom: 5px;
+                            display: block;
+                        }
+                        .sub_title::after {
+                            content: ''; display: inline-block;
+                            background-color: $subColor-r;
+                            width: 4px; height: 4px; border-radius: 50%;
+                            position: relative; top: -8px;
+                        }
+                        .user_input {
+                            position: relative;
+                            input {
+                                background-color: $subColor-ip;
+                                width: 100%; height: 48px;
+                                border-radius: 7px;
+                                padding: 0 20px;
+                                font-weight: $weight600;
+                            }
+                            input:hover {
+                                background-color: #ededed;
+                            }
+                            input:focus {
+                                border: 1px solid #000;
+                                background-color: #fff;
+                            }
+                            input::placeholder {color: #bdbdbd; font-weight: 300;}
+                            .reset_btn {
+                                i[class$=xmark] {color: #999;}
+                                position: absolute; right: 10px; top: 0;
+                            }
+                        }
+                    }
+                    // 개별선택자
+                    .user_info {
+                        .birth {
+                            .sub_title {}
+                            .user_birth {
+                                display: flex; justify-content: space-between;
+                                .select_box {
+                                    display: flex; justify-content: space-between; align-items: center; padding: 0 20px;
+                                    background-color: #fafafa;
+                                    width: calc(100% / 3 - 10px); height: 48px;
+                                    border-radius: 10px;
+                                    position: relative;
+                                    div {
+                                        border-radius: 7px;
+                                        color: #bdbdbd;
+                                        .now {
+                                            display: block;
+                                            background-color: #fafafa;
+                                            color: #d4d4d4;
+                                        }
+                                        .open {
+                                            display: none;
+                                            position: relative; left: 0; bottom: -20px;
+                                            // background-color: ;
+                                        }
+                                    }
+                                    .more {color: #bdbdbd; font-size: 12px; padding-top: 4px;}
+                                }
+                                .active {
+                                    background-color: $subColor-ip;
+                                    div {
+                                        .now {color: #c2c2c2;}
+                                    }
+                                }
+                            }
+                        }
+                        .gender {
+                            margin-bottom: 20px;
+                            .sub_title {
+                                margin-bottom: 20px;
+                            }
+                            .user_gender {
+                                padding: 0 20px;
+                                display: flex;
+                                label {
+                                    display: flex;
+                                    width: 50%;
+                                    em {
+                                        font-family: $familySemiBold;
+                                    }
+                                    input {display: none;}
+                                    input:checked + .circle {
+                                        background-color: #1273e4;
+                                        border-color: #1273e4;
+                                        animation: popup 0.1s;
+                                    }
+                                    .circle {
+                                        display: inline-block;
+                                        border: 1px solid #999;
+                                        border-radius: 50%;
+                                        width: 18px;
+                                        height: 18px;
+                                        margin-right: 10px;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                        .nickname {
+                            .sub_title {}
+                            .nickname_frm {
+                                display: flex; justify-content: space-between;
+                                .left {
+                                    width: calc(70% - 5px);
+                                    .nickname_input {
+                                        position: relative;
+                                        input {
+                                            background-color: $subColor-ip;
+                                            width: 100%; height: 48px;
+                                            border-radius: 7px;
+                                            padding: 0 20px;
+                                            font-weight: $weight600;
+                                        }
+                                        .reset_btn {
+                                            position: absolute; right: 10px; top: 15px;
+                                            i[class$=xmark] {color: #999;}
+                                        }
+                                    }
+                                    .error {
+                                        display: none;
+                                    }
+                                }
+                                .replay {
+                                    width: calc(30% - 5px); height: 48px;
+                                    border: 1.5px solid #ebebeb;
+                                    border-radius: 10px; font-family: $familySemiBold;
+                                }
+                            }
+                        }
+                    }
+                    .btn_wrap {
+                        margin-top: 10px;
+                        .next_btn {
+                            width: 100%; height: 56px;
+                            background-color: $subColor-btn; line-height: 56px;
+                            color: #d6d6d6; text-align: center;
+                            font-size: 1.125rem; font-weight: $weight500;
+                            border-radius: 7px;
+                            cursor: not-allowed;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes popup {
+    0% {
+        scale: 0.2;
+    }
+    100% {
+        scale: 1;
+    }
+}

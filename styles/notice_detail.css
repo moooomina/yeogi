@@ -1,0 +1,71 @@
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+main section {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+main section .back_page {
+  font-size: 1.25rem;
+}
+main section .title {
+  padding: 16px 0;
+  border-bottom: 1px solid #C2C2C2;
+  margin-bottom: 20px;
+}
+main section .title .notice {
+  font-size: 0.563rem;
+  color: #f45858;
+  padding: 1.5px 4px;
+  background: #FFEBEB;
+  display: inline-block;
+}
+main section .title h1 {
+  font-size: 1rem;
+  color: #333333;
+  font-weight: 500;
+  padding: 5px 0;
+}
+main section .title .day {
+  font-size: 0.813rem;
+  color: #C2C2C2;
+}
+main section .contents p {
+  font-size: 0.813rem;
+  color: #333333;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+main section .contents .title_event {
+  font-size: 0.8333rem;
+  color: #333333;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding-top: 30px;
+}
+main section .contents .prize_box {
+  width: 220px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #666;
+  margin-bottom: 30px;
+}
+main section .contents .prize_box .prize {
+  background: #666;
+  padding: 40px 3px;
+}
+main section .contents .prize_box .prize .issue {
+  font-size: 0.75rem;
+  color: #fff;
+}
+main section .contents .prize_box .winner {
+  display: flex;
+  flex-flow: column nowrap;
+}
+main section .contents .prize_box .winner span {
+  font-size: 0.75rem;
+  color: #333333;
+  padding: 2px 3px;
+}/*# sourceMappingURL=notice_detail.css.map */

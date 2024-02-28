@@ -1,0 +1,253 @@
+@import "common";
+
+main {
+    max-width:$desktop ;
+    padding: 20px 0 96px;
+    margin: 0 auto;
+    .container {
+        margin: 0 auto;
+        section {
+            padding:16px 0 20px ;
+            h1 {
+                margin: 2px 0 2px;
+                font-size:$title24 ;
+                font-weight:$weight700 ;
+            }
+            p {
+                margin-top: 4px;
+                line-height: 1.5rem;
+                color: #999999;
+            }
+        }
+        .wrap {
+            padding: 35px 30px;
+            @include flex-rnsc;
+            background-color:#f5f7fa ;
+            border-radius: 10px;
+            .left {
+                .tel_btn {
+                    margin-bottom: 8px;
+                    @include flex-rnsc;
+                    font-size: 1.25rem;
+                    font-weight: $weight700;
+                    i[class*=phone] {
+                        font-size: 15px;
+                        margin-right: 8px;
+                        color:rgb(194, 194, 194) ;
+                    }
+                }
+                p {
+                    font-size: 0.8125rem;
+                    line-height: 1.25rem;
+                    color: #999999;
+                }
+            }
+            .right {
+                position: relative;
+                .chatting_consultation {
+                    @include flex-rnsc;
+                    cursor: pointer;
+                    height: 48px;
+                    border-radius: 10px; 
+                    border: 2px solid rgb(235, 235, 235);
+                    font-weight: $weight600;
+                    background-color: #fff;
+                    padding: 10px 18px 10px 16px;
+                    i[class*=comment] {
+                        margin-right: 8px;
+                        font-size: 16px;
+                        color: rgb(194, 194, 194);
+                    }
+                    p {
+                        color: rgb(51, 51, 51);
+                        font-weight: $weight600;
+                    }
+                }
+                // 챗 화면
+                .chat_container {
+                    position: fixed; top: 150px; right: 0;
+                    width: 400px; height: 600px;
+                    border-radius:15px ;
+                    border: 2px solid #f5f7fa;
+                    // 
+                    // display: none;
+                    > .top {
+                        background-color: #fff;
+                        border-top-left-radius:15px ;
+                        border-top-right-radius:15px ;
+                        display: flex; height: 40px; align-items: center;
+                        i[class*=left] {
+                            margin:0 10px;
+                            font-size: 15px;
+                        }
+                        h2 {
+                            font-weight: $weight600;
+                        }
+                    }
+                    .chat_message {
+                        display: flex;
+                        flex-direction: column;
+                        background-color: $subColor-r;
+                        height:455px; width: 100%;
+                        overflow-y:scroll ;
+                        overflow-x: hidden;
+                        padding: 15px;
+                        .message {
+                            border-radius: 5px;
+                            padding: 10px 5px;
+                            margin-bottom: 10px;
+                            color: #fff;
+                            width: 80%;
+                        }
+                        .ai_message {
+                            align-self: flex-start;
+                            background-color: #999999;
+
+                        }
+                        .user_message {
+                            background-color:$mainColor-b ;
+                            align-self: flex-end;
+                        }
+                    }
+                    .user_input {
+                        position: relative; top: 0; left: 0;
+                        height: 100px;
+                        background-color: #fff;
+                        border-bottom-left-radius:15px ;
+                        border-bottom-right-radius:15px ;
+                        #user_txt {
+                            width: calc(100% - 60px); outline: none;
+                            background-color: rgba(255, 255, 255, 0.5);
+                            width: 100%; height: 75%;
+                            padding:5px 10px; overflow-x: hidden;
+                            border: none; outline: none;
+                            resize: none;
+                        }
+                        .chat_btn {
+                            position: absolute; bottom: 0; right: 20px;
+                            background-color:$mainColor-b ;
+                            color: #fff; width: 60px; height: 30px;
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        .inquiry {
+            section {
+                h2 {
+                    margin-top: 20px;
+                    padding: 16px 0;
+                    font-size: $title20;
+                    font-family: $familyBold;
+                    
+                }
+                ul {
+                    margin-bottom: 8px;
+                    display: flex; flex-flow:row wrap;
+                    overflow: auto;
+                    gap: 6px 8px;
+                    li {
+                        display: flex; align-items: center;
+                        padding-bottom: 12px;
+                        height: 32px;
+                        max-width: 212px;
+                        padding: 8px 16px;
+                        cursor: pointer;
+                        border: 2px solid #f5f7fa;
+                        color: #fff;
+                        border-radius: 100px;
+                        button {
+                            font-size: $subT15;
+                            font-family: $familySemiBold;
+                        }
+                    }
+                    li:first-of-type {
+                        button {
+                            color: #fff;
+                        }
+                        background-color: $mainColor-b;
+                    }
+                }
+            }
+            .box {
+                ul {
+                    width: 100%;
+                    overflow: hidden;
+                    li {
+                        .btn {
+                            @include flex-rnsc;
+                            border-bottom: 1px solid #f5f7fa;
+                            padding: 20px 0;
+                            .left {
+                                
+                                line-height: 1.5rem;
+                                span {
+                                    margin-right: 8px;
+                                    padding: 0 6px;
+                                    font-size: $title18;
+                                    font-weight:$weight700 ;
+                                    color: #c2c2c2;
+                                }
+                                p {
+                                    font-weight: $weight600;
+                                }
+                            }
+                            .right {
+                                color: #c2c2c2;
+                                font-size: 12px;
+                            }
+                        }
+                        .contents {
+                            transform: all 0.3s ease-in-out;
+                            background-color: #f5f5f5;
+                            padding: 20px;
+                            .box {
+                                margin-bottom: 20px;
+                                em {
+                                    font-size: $subT15;
+                                    line-height: 1.375rem;
+                                    color: #252525;
+                                    font-weight: $weight600;
+                                }
+                                p {
+                                    font-size:$subT15;
+                                    line-height: 1.375rem;
+                                    color: #252525;
+                                    margin: 0;
+                                }
+                            }
+                            .box:last-child {
+                                margin: 0;
+                            }
+                            p {
+                                font-size: $subT15;
+                                line-height: 1.375rem;
+                                color: #252525;
+                                margin-bottom: 20px;
+                            }
+                            p:last-child {
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1199px) {
+    main {
+        max-width: $notebook;
+    }
+}
+@media screen and (max-width:899px) {
+    main {
+        max-width: $tablet;
+    }
+}
+@media screen and (max-width:599px) {
+    main {
+        max-width: $phone;
+    }
+}

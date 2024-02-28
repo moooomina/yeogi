@@ -1,0 +1,1910 @@
+@charset "UTF-8";
+body {
+  overflow-x: hidden;
+}
+
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+main .main_popup {
+  display: none;
+  /* 스크롤 디자인 */
+  /*스크롤바 크기*/
+  /*스크롤 드래그바*/
+}
+main .main_popup ::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+main .main_popup ::-webkit-scrollbar-thumb {
+  background-color: #d9d9d9;
+  border-radius: 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup {
+  display: none;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 9999;
+  position: fixed;
+  display: none;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search {
+  width: 100%;
+  padding: 15px 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fafafa;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .back_btn {
+  height: 72px;
+  padding: 12px 20px;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .back_btn .back i {
+  font-size: 1.25rem;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail {
+  width: 100%;
+  height: 100vh;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .user_search_box_m {
+  background-color: #fff;
+  padding: 30px 20px 12px;
+  border-radius: 15px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .user_search_box_m .user_search_m {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  margin: 5px 0;
+  height: 48px;
+  padding: 4px 14px;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .user_search_box_m .user_search_m .left i {
+  color: #999;
+  margin-right: 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .user_search_box_m .user_search_m .left #search_input_m::-moz-placeholder {
+  color: #d6d6d6;
+  font-family: PretendardMedium;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .user_search_box_m .user_search_m .left #search_input_m::placeholder {
+  color: #d6d6d6;
+  font-family: PretendardMedium;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .user_search_box_m .user_search_m .reset {
+  display: none;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .user_search_box_m .user_search_m .reset i {
+  color: #999;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .search_ranking_m {
+  background-color: #fff;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 0 0 200px;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .search_ranking_m h3 {
+  font-family: PretendardSemiBold;
+  padding: 10px 20px;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .search_ranking_m ol {
+  padding: 0 10px;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .search_ranking_m ol li {
+  padding: 12px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .search_ranking_m ol li em {
+  font-weight: 600;
+  width: 30px;
+}
+main .main_popup #search_frm_m fieldset .search_popup .search_popup_bg .travel_search .user_search_detail .search_ranking_m ol li:hover {
+  background-color: #fafafa;
+  width: 100%;
+  border-radius: 10px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m {
+  display: none;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 999;
+  position: fixed;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m {
+  width: 100%;
+  height: 100vh;
+  padding: 10px 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fafafa;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .close_btn {
+  position: absolute;
+  left: 20px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .close_btn .close {
+  font-size: 22px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m {
+  border-bottom: 1px solid #eeeeee;
+  padding: 0 20px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m ul li {
+  padding: 15px 30px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m ul li span {
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m ul li:first-child {
+  border-bottom: 2px solid #1273e4;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_top_m .search_tab_m ul li:first-child span {
+  color: #1273e4;
+  font-family: PretendardBold;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .search_box_m .search_before {
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #eeeeee;
+  padding: 4px 14px;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .search_box_m .search_before span {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #d6d6d6;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .search_box_m .search_before span i {
+  color: #999;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .search_box_m .search_before span span {
+  padding: 10px 5px;
+  color: #d6d6d6;
+  font-family: PretendardSemiBold;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .search_box_m .search_before .change {
+  color: #1273e4;
+  font-size: 0.875rem;
+  font-family: PretendardSemiBold;
+  padding: 8px 10px;
+  white-space: nowrap;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .search_box_m .search_before .change:hover {
+  background-color: #f5f5f5;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .search_box_m .search_after {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 8px 20px 20px;
+  width: 100%;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .search_box_m .search_after h2 {
+  font-size: 1.25rem;
+  font-family: PretendardBold;
+  padding: 16px 0;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .search_box_m .search_after .user_search_detail_m {
+  padding: 15px 20px 15px 16px;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  margin: 5px 0;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .search_box_m .search_after .user_search_detail_m i {
+  color: #999;
+  margin-right: 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .search_box_m .search_after .user_search_detail_m span {
+  color: #c2c2c2;
+  font-family: PretendardSemiBold;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .calendar_date_m {
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #eeeeee;
+  padding: 4px 14px;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .calendar_date_m span {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .calendar_date_m span i {
+  margin-right: 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .calendar_date_m span span {
+  padding: 10px 0;
+  font-family: PretendardSemiBold;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .calendar_date_m .change {
+  color: #1273e4;
+  font-size: 0.875rem;
+  font-family: PretendardSemiBold;
+  padding: 8px 10px;
+  white-space: nowrap;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .calendar_date_m .change:hover {
+  background-color: #f5f5f5;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m {
+  width: 100%;
+  display: none;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m {
+  width: 93%;
+  border-radius: 16px;
+  position: absolute;
+  z-index: 999;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
+  height: calc(100vh - 200px);
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_top_m {
+  border-bottom: 1px solid #eeeeee;
+  white-space: nowrap;
+  width: 100%;
+  padding: 10px 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_top_m h2 {
+  font-size: 1.125rem;
+  font-family: PretendardBold;
+  padding: 20px 20px 16px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_top_m ul {
+  max-width: 288px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_top_m ul li {
+  padding: 10px 13px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_top_m ul li span {
+  font-size: 0.875rem;
+  color: #999;
+  font-family: PretendardMedium;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_select {
+  width: 100%;
+  padding: 10px 5px;
+  height: 75%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: scroll;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_select .date {
+  width: 80%;
+  margin-bottom: 15px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  width: 288px;
+  max-width: 288px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_select .date h3 {
+  margin: 5px 0 25px 10px;
+  font-family: PretendardSemiBold;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_select .date .day_box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_select .date .day_box ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_select .date .day_box ul li {
+  margin-bottom: 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_select .date .day_box ul li .day {
+  color: #707070;
+  padding: 10px 0;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_select .date .day_box ul li .redday {
+  color: #f45858;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_select .date .day_box ul li .day:hover {
+  background-color: #f5f5f5;
+  width: 40px;
+  border-radius: 50%;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_bottom_m {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-top: 1px solid #eeeeee;
+  width: 93%;
+  height: 80px;
+  position: fixed;
+  bottom: 30px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 2px 16px 0 rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_bottom_m .date_reset {
+  cursor: pointer;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_bottom_m .date_reset i {
+  font-size: 0.875rem;
+  color: #d6d6d6;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_bottom_m .date_reset span {
+  font-size: 0.875rem;
+  color: #d6d6d6;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_bottom_m .user_select {
+  background-color: #1273e4;
+  border-radius: 10px;
+  width: 144px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_bottom_m .user_select .select {
+  font-family: PretendardMedium;
+  color: #fff;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .calendar_detail_m .date_select_box_m .date_select_detail_m .date_bottom_m .user_select .select .total_night {
+  font-family: PretendardMedium;
+  color: #fff;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .num_view_m {
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #eeeeee;
+  padding: 4px 14px;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .num_view_m span {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .num_view_m span i {
+  margin-right: 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .num_view_m span span {
+  padding: 10px 0;
+  font-family: PretendardSemiBold;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .num_view_m .change {
+  color: #1273e4;
+  font-size: 0.875rem;
+  font-family: PretendardSemiBold;
+  padding: 8px 10px;
+  white-space: nowrap;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .num_view_m .change:hover {
+  background-color: #f5f5f5;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select {
+  display: none;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 8px 20px 20px;
+  width: 100%;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select h2 {
+  font-size: 1.25rem;
+  font-family: PretendardBold;
+  padding: 16px 0;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select div h3 {
+  font-family: PretendardMedium;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select div p {
+  font-size: 0.813rem;
+  color: #999;
+  margin-top: 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select div div {
+  display: flex;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select div div button i {
+  font-size: 30px;
+  color: #fff;
+  border-radius: 50%;
+  border: 1px solid #f5f5f5;
+  background-color: #333;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select div div button:hover i {
+  color: #f5f5f5;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select div div span {
+  padding: 10px 20px;
+  font-size: 1.25rem;
+  font-family: PretendardBold;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .user_room {
+  border-bottom: 1px solid #d6d6d6;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .user_room h3 {
+  padding: 10px 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .user_room .user_room_select .num_minus i {
+  background-color: #d6d6d6;
+  color: #f5f5f5;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .user_adult_left {
+  padding-bottom: 0;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .user_adult_left .user_adult {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .user_children_left {
+  border-bottom: 1px solid #d6d6d6;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .user_children_left .user_children {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .children_notice {
+  background-color: #f5f5f5;
+  padding: 15px;
+  margin: 20px 0 10px;
+  border-radius: 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .children_notice ul li {
+  font-size: 0.75rem;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .children_age {
+  margin-bottom: 5px;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .children_age .user_children_age {
+  border: 1px solid #f5f5f5;
+  border-radius: 10px;
+  padding: 10px 15px;
+  width: 140px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: #f5f5f5;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .children_age .user_children_age .children_age_select {
+  width: 140px;
+  height: 160px;
+  overflow: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  position: absolute;
+  top: -170px;
+  right: 0px;
+  display: none;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_center_m .num_detail_m .user_select .children_age .user_children_age .children_age_select span {
+  font-size: 0.938rem;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_bottom_m {
+  width: 100%;
+  height: 106px;
+  padding: 0 20px 16px 20px;
+  background-color: #fff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.24);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+main .main_popup #search_frm_m fieldset .search_popup_m .popup_bg .search_m .search_bottom_m #search_btn_m {
+  background-color: #1273e4;
+  padding: 16px 20px;
+  color: #fff;
+  width: 100%;
+  height: 56px;
+  font-size: 1.125rem;
+  font-family: PretendardSemiBold;
+  border-radius: 10px;
+  text-align: center;
+}
+main .main_container {
+  width: 100%;
+  margin: 0 auto;
+  /*스크롤바 크기*/
+  /*스크롤 드래그바*/
+}
+main .main_container ::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+main .main_container ::-webkit-scrollbar-thumb {
+  background-color: #d9d9d9;
+  border-radius: 5px;
+}
+main .main_container .main_wrap {
+  width: calc(100% - 60px);
+  margin: 0 auto;
+  position: relative;
+}
+main .main_container .main_wrap h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.4;
+  letter-spacing: 1.7px;
+  position: absolute;
+  top: 210px;
+}
+main .main_container .main_wrap .search_wrap {
+  background-color: #fff;
+  width: 100%;
+  position: absolute;
+  top: 320px;
+  border-radius: 15px;
+}
+main .main_container .main_wrap .search_wrap #search_frm {
+  width: 100%;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset {
+  width: 100%;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big {
+  width: 100%;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .search_tab {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #f5f5f5;
+  padding: 25px 20px 0;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .search_tab h2 #kr_room {
+  padding: 0 10px 18px;
+  margin-right: 20px;
+  color: #f7323f;
+  border-bottom: 2px solid #f7323f;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .search_tab h2 #over_room {
+  padding: 0 10px 18px;
+  color: #999;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail {
+  position: relative;
+  width: 40%;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .user_search {
+  margin-right: 10px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .user_search i {
+  color: #999;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .user_search #search_input {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 4px 14px 4px 40px;
+  width: 100%;
+  height: 48px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .user_search #search_input::-moz-placeholder {
+  color: #d9d9d9;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .user_search #search_input::placeholder {
+  color: #d9d9d9;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .user_search #search_input:hover {
+  background-color: #eeeeee;
+  border-radius: 10px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .user_search #search_input:focus {
+  border: 1px solid #000;
+  background-color: #fff;
+  width: 100%;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .search_ranking {
+  display: none;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
+  padding: 30px 15px 20px;
+  width: 100%;
+  height: 320px;
+  position: absolute;
+  top: 55px;
+  left: 0;
+  z-index: 999;
+  overflow-y: scroll;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .search_ranking h3 {
+  margin-bottom: 20px;
+  padding: 0 15px;
+  font-family: PretendardBold;
+  color: #f7323f;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .search_ranking ol li {
+  padding: 12px 15px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .search_ranking ol li em {
+  font-family: PretendardSemiBold;
+  width: 30px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .search_ranking ol li:hover {
+  background-color: #fafafa;
+  width: 100%;
+  border-radius: 10px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .user_search_detail .search_results {
+  display: none;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 25%;
+  margin-right: 10px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .calendar_date {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 4px 14px;
+  width: 100%;
+  height: 48px;
+  cursor: pointer;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .calendar_date i {
+  color: #999;
+  margin-right: 10px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .calendar_date span {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .hover {
+  background-color: #eeeeee;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .input_active {
+  border: 1px solid #000;
+  background-color: #fff;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box {
+  display: none;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
+  padding: 30px 15px 20px;
+  width: 250%;
+  position: absolute;
+  top: 55px;
+  left: 0;
+  z-index: 999;
+  overflow-x: hidden;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail {
+  width: 210%;
+  position: relative;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .box_btn {
+  width: 50%;
+  padding-right: 90px;
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top {
+  display: flex;
+  justify-content: space-between;
+  width: 1150px;
+  padding-bottom: 10px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date {
+  width: 370px;
+  padding: 10px 5px;
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date h3 {
+  margin-bottom: 30px;
+  font-family: PretendardSemiBold;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date table thead {
+  margin-bottom: 40px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date table thead tr th {
+  color: #999;
+  padding-bottom: 15px;
+  font-size: 0.813rem;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr {
+  width: 100%;
+  height: 50px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr td {
+  color: #707070;
+  padding: 2px;
+  font-size: 0.813rem;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr td:hover {
+  background-color: #f5f5f5;
+  border-radius: 50%;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr .redday {
+  color: #f45858;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr .start_active {
+  background-color: #1273e4;
+  color: #fff;
+  border-radius: 50%;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_top .date table tbody tr .end_active {
+  background-color: #1273e4;
+  color: #fff;
+  border-radius: 50%;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_bottom {
+  margin: 0 10px;
+  width: 780px;
+  border-top: 1px solid #d6d6d6;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_bottom .date_reset {
+  position: relative;
+  bottom: -18px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_bottom .date_reset i {
+  font-size: 0.75rem;
+  color: #d6d6d6;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_bottom .date_reset span {
+  font-size: 0.75rem;
+  color: #d6d6d6;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_bottom .active {
+  color: #555;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_bottom .active:hover i {
+  color: #999;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_bottom .active:hover span {
+  color: #999;
+  text-decoration: underline;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_bottom .user_select {
+  text-align: center;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_bottom .user_select .date_select_firstday {
+  font-size: 0.875rem;
+  color: #999;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_bottom .user_select .date_select_lastday {
+  font-size: 0.875rem;
+  color: #999;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .calendar_detail .date_select_box .date_select_detail .date_bottom .user_select .total_night {
+  font-size: 0.875rem;
+  font-family: PretendardMedium;
+  color: #999;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 25%;
+  margin-right: 10px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .num_view {
+  width: 100%;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .num_view #num_select {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 4px 14px;
+  width: 100%;
+  height: 48px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .num_view #num_select i {
+  color: #999;
+  margin-right: 10px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .num_view #num_select span {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .num_view #num_select span span {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .num_view .input_active {
+  border: 1px solid #000;
+  background-color: #fff;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .num_view:hover #num_select {
+  background-color: #eeeeee;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
+  padding: 0 20px;
+  width: 100%;
+  position: absolute;
+  top: 55px;
+  left: 0;
+  z-index: 9;
+  display: none;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select div p {
+  font-size: 0.813rem;
+  color: #999;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select div div {
+  display: flex;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select div div button i {
+  font-size: 30px;
+  color: #fff;
+  border-radius: 50%;
+  border: 1px solid #f5f5f5;
+  background-color: #333;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select div div button:hover i {
+  color: #f5f5f5;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select div div span {
+  padding: 10px 20px;
+  font-size: 1.25rem;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .user_room {
+  border-bottom: 1px solid #d6d6d6;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .user_room h3 {
+  padding: 10px 5px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .user_room .user_room_select .num_minus i {
+  background-color: #d6d6d6;
+  color: #f5f5f5;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .user_adult_left {
+  padding-bottom: 0;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .user_adult_left .user_adult {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .user_children_left {
+  border-bottom: 1px solid #d6d6d6;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .user_children_left .user_children {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .user_children_left .user_children h3 {
+  margin-bottom: 5px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .children_notice {
+  background-color: #f5f5f5;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .children_notice ul li {
+  font-size: 0.75rem;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .children_age {
+  margin-bottom: 10px;
+  display: none;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .children_age .user_children_age {
+  border: 1px solid #f5f5f5;
+  border-radius: 10px;
+  padding: 10px 15px;
+  width: 140px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: #f5f5f5;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .children_age .user_children_age .children_age_select {
+  width: 140px;
+  height: 160px;
+  overflow: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  position: absolute;
+  top: -170px;
+  right: 0px;
+  display: none;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .num_detail .user_select .children_age .user_children_age .children_age_select span {
+  font-size: 0.938rem;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .search_btn {
+  width: 10%;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_big .user_search_box .search_btn #search_btn {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7323f;
+  border-radius: 10px;
+  color: #fff;
+  padding: 4px 14px;
+  height: 48px;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_small {
+  padding: 15px;
+  width: 100%;
+  display: none;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_small .user_search i {
+  margin-right: 5px;
+  color: #707070;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_small .user_search #search_input_m::-moz-placeholder {
+  color: #999;
+  font-family: PretendardMedium;
+}
+main .main_container .main_wrap .search_wrap #search_frm fieldset .search_small .user_search #search_input_m::placeholder {
+  color: #999;
+  font-family: PretendardMedium;
+}
+main .main_container .main_bg {
+  background-image: url(https://images.unsplash.com/photo-1682685796766-0fddd3e480de?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 530px;
+  background-position: center;
+  background-size: cover;
+}
+main .center_container {
+  width: calc(100% - 60px);
+  margin: 0 auto;
+}
+main .center_container div .title_box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+main .center_container div .title_box .subj {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+main .center_container div div .box_btn div {
+  width: 40px;
+}
+main .center_container div div .box_btn div i {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.24);
+}
+main .center_container div div .box_btn .swiper-button-prev {
+  position: absolute;
+  left: -20px;
+  z-index: 99;
+}
+main .center_container div div .box_btn .swiper-button-prev::after {
+  display: none;
+}
+main .center_container div div .box_btn .swiper-button-next {
+  position: absolute;
+  right: -20px;
+  z-index: 99;
+}
+main .center_container div div .box_btn .swiper-button-next::after {
+  display: none;
+}
+main .center_container div div .swiper-container .swiper-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+main .center_container .event_wrap {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+main .center_container .event_wrap .title_box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+main .center_container .event_wrap .title_box a i {
+  color: #1273e4;
+}
+main .center_container .event_wrap .event_box {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+main .center_container .event_wrap .event_box .box_btn {
+  display: none;
+}
+main .center_container .event_wrap .event_box .box_btn div {
+  width: 40px;
+}
+main .center_container .event_wrap .event_box .box_btn div i {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.24);
+}
+main .center_container .event_wrap .event_box .box_btn .swiper-button-prev {
+  position: absolute;
+  left: -20px;
+  z-index: 99;
+}
+main .center_container .event_wrap .event_box .box_btn .swiper-button-prev::after {
+  display: none;
+}
+main .center_container .event_wrap .event_box .box_btn .swiper-button-next {
+  position: absolute;
+  right: -20px;
+  z-index: 99;
+}
+main .center_container .event_wrap .event_box .box_btn .swiper-button-next::after {
+  display: none;
+}
+main .center_container .event_wrap .event_box .event_bnr_detail {
+  overflow-x: hidden;
+}
+main .center_container .event_wrap .event_box .event_bnr_detail .swiper-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+main .center_container .event_wrap .event_box .event_bnr_detail .swiper-wrapper a {
+  width: 33.3333333333%;
+}
+main .center_container .event_wrap .event_box .event_bnr_detail .swiper-wrapper a img {
+  width: 100%;
+  border-radius: 10px;
+}
+main .center_container .event_wrap .event_box .swiper-pagination {
+  bottom: -20px;
+}
+main .center_container .event_wrap .event_box:hover .box_btn {
+  display: block;
+}
+main .center_container .kr_hot_travel_wrap {
+  margin-bottom: 50px;
+  position: relative;
+}
+main .center_container .kr_hot_travel_wrap .box_btn {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+}
+main .center_container .kr_hot_travel_wrap .box_btn div {
+  width: 40px;
+}
+main .center_container .kr_hot_travel_wrap .box_btn div i {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.24);
+}
+main .center_container .kr_hot_travel_wrap .box_btn .swiper-button-prev01 {
+  position: absolute;
+  left: -20px;
+  z-index: 99;
+}
+main .center_container .kr_hot_travel_wrap .box_btn .swiper-button-prev01::after {
+  display: none;
+}
+main .center_container .kr_hot_travel_wrap .box_btn .swiper-button-next01 {
+  position: absolute;
+  right: -20px;
+  z-index: 99;
+}
+main .center_container .kr_hot_travel_wrap .box_btn .swiper-button-next01::after {
+  display: none;
+}
+main .center_container .kr_hot_travel_wrap .kr_travel_box {
+  overflow-x: hidden;
+}
+main .center_container .kr_hot_travel_wrap .kr_travel_box .kr_travel_detail {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+main .center_container .kr_hot_travel_wrap .kr_travel_box .kr_travel_detail .kr_travel {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 16.6666666667%;
+  min-width: 100px;
+}
+main .center_container .kr_hot_travel_wrap .kr_travel_box .kr_travel_detail .kr_travel img {
+  width: 100%;
+  border-radius: 10px;
+}
+main .center_container .kr_hot_travel_wrap .kr_travel_box .kr_travel_detail .kr_travel img:hover {
+  filter: brightness(80%);
+}
+main .center_container .kr_hot_travel_wrap .kr_travel_box .kr_travel_detail .kr_travel .kr_travel_txt {
+  font-size: 0.938rem;
+  padding: 12px 4px 20px;
+}
+main .center_container .kr_hot_travel_wrap .kr_travel_box .kr_travel_detail .kr_travel:first-child {
+  margin-left: 0;
+}
+main .center_container .over_hot_travel_wrap {
+  margin-bottom: 50px;
+  position: relative;
+}
+main .center_container .over_hot_travel_wrap .box_btn {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+}
+main .center_container .over_hot_travel_wrap .box_btn div {
+  width: 40px;
+}
+main .center_container .over_hot_travel_wrap .box_btn div i {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.24);
+}
+main .center_container .over_hot_travel_wrap .box_btn .swiper-button-prev02 {
+  position: absolute;
+  left: -20px;
+  z-index: 99;
+}
+main .center_container .over_hot_travel_wrap .box_btn .swiper-button-prev02::after {
+  display: none;
+}
+main .center_container .over_hot_travel_wrap .box_btn .swiper-button-next02 {
+  position: absolute;
+  right: -20px;
+  z-index: 99;
+}
+main .center_container .over_hot_travel_wrap .box_btn .swiper-button-next02::after {
+  display: none;
+}
+main .center_container .over_hot_travel_wrap .over_travel_box {
+  overflow-x: hidden;
+}
+main .center_container .over_hot_travel_wrap .over_travel_box .over_travel_detail {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+main .center_container .over_hot_travel_wrap .over_travel_box .over_travel_detail .over_travel {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 100px;
+  width: 16.6666666667%;
+}
+main .center_container .over_hot_travel_wrap .over_travel_box .over_travel_detail .over_travel img {
+  width: 100%;
+  border-radius: 10px;
+}
+main .center_container .over_hot_travel_wrap .over_travel_box .over_travel_detail .over_travel img:hover {
+  filter: brightness(80%);
+}
+main .center_container .over_hot_travel_wrap .over_travel_box .over_travel_detail .over_travel .over_travel_txt {
+  font-size: 0.938rem;
+  padding: 12px 4px 20px;
+}
+main .center_container .recommend_room_wrap {
+  margin-bottom: 50px;
+  position: relative;
+}
+main .center_container .recommend_room_wrap .sub_menu_box {
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+main .center_container .recommend_room_wrap .sub_menu_box .sub_menu_list {
+  display: flex;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+main .center_container .recommend_room_wrap .sub_menu_box .sub_menu_list .sub_menu {
+  border: 1px solid #d6d6d6;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  margin: 0px 4px 5px 0;
+  font-family: PretendardMedium;
+  cursor: pointer;
+}
+main .center_container .recommend_room_wrap .sub_menu_box .sub_menu_list .menu1 {
+  background-color: #1273e4;
+  color: #fff;
+  border: 0;
+}
+main .center_container .recommend_room_wrap .sub_menu_box .more_btn {
+  display: none;
+  position: relative;
+  z-index: 99;
+  right: 0;
+  cursor: pointer;
+}
+main .center_container .recommend_room_wrap .sub_menu_box .more_btn i {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  cursor: pointer;
+  border: 1px solid #eeeeee;
+  font-size: 13px;
+}
+main .center_container .recommend_room_wrap .box_btn {
+  width: 100%;
+  position: absolute;
+  top: 35%;
+}
+main .center_container .recommend_room_wrap .box_btn div {
+  width: 40px;
+  display: block;
+}
+main .center_container .recommend_room_wrap .box_btn div i {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.24);
+}
+main .center_container .recommend_room_wrap .box_btn .swiper-button-prev03 {
+  position: absolute;
+  left: -20px;
+  z-index: 99;
+}
+main .center_container .recommend_room_wrap .box_btn .swiper-button-prev03::after {
+  display: none;
+}
+main .center_container .recommend_room_wrap .box_btn .swiper-button-next03 {
+  position: absolute;
+  right: -20px;
+  z-index: 99;
+}
+main .center_container .recommend_room_wrap .box_btn .swiper-button-next03::after {
+  display: none;
+}
+main .center_container .recommend_room_wrap .room_box {
+  overflow-x: hidden;
+}
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 240px;
+}
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .photo {
+  width: 100%;
+}
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .photo img {
+  width: 100%;
+  border-radius: 10px;
+}
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .title_wrap .type {
+  font-size: 0.688rem;
+  color: #999;
+  margin: 10px 0 5px;
+}
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .title_wrap .title .name {
+  font-size: 1rem;
+  font-weight: 600;
+}
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .title_wrap .location {
+  margin: 3px 0 5px;
+}
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .title_wrap .location .more {
+  font-size: 0.813rem;
+  color: #999;
+}
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review {
+  margin-bottom: 15px;
+}
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap {
+  background-color: #ffad0a;
+  padding: 0 1px 3px 4px;
+  border-radius: 5px;
+  margin-right: 7px;
+}
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap i {
+  font-size: 0.688rem;
+}
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap .point {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .comment {
+  font-size: 0.813rem;
+  color: #999;
+}
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .price_info .coupon {
+  font-size: 0.75rem;
+  color: #999;
+  margin-bottom: 3px;
+}
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .price_info .price .now {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .price_info .price .now span {
+  font-size: 0.938rem;
+}
+main .center_container .recommend_room_wrap .room_box .swiper-wrapper .room .contents .price_info .price .origin {
+  font-size: 0.875rem;
+  color: #999;
+  text-decoration: line-through;
+}
+main .center_container .today_special_wrap {
+  margin-bottom: 50px;
+  position: relative;
+}
+main .center_container .today_special_wrap .title_box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+main .center_container .today_special_wrap .title_box a i {
+  color: #1273e4;
+}
+main .center_container .today_special_wrap .box_btn {
+  width: 100%;
+  position: absolute;
+  top: 28%;
+}
+main .center_container .today_special_wrap .box_btn div {
+  width: 40px;
+  display: block;
+}
+main .center_container .today_special_wrap .box_btn div i {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.24);
+}
+main .center_container .today_special_wrap .box_btn .swiper-button-prev04 {
+  position: absolute;
+  left: -20px;
+  z-index: 99;
+}
+main .center_container .today_special_wrap .box_btn .swiper-button-prev04::after {
+  display: none;
+}
+main .center_container .today_special_wrap .box_btn .swiper-button-next04 {
+  position: absolute;
+  right: -20px;
+  z-index: 99;
+}
+main .center_container .today_special_wrap .box_btn .swiper-button-next04::after {
+  display: none;
+}
+main .center_container .today_special_wrap .room_box {
+  overflow-x: hidden;
+}
+main .center_container .today_special_wrap .room_box .swiper-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 240px;
+}
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .photo {
+  width: 100%;
+}
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .photo img {
+  width: 100%;
+  border-radius: 10px;
+}
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .type {
+  font-size: 0.688rem;
+  color: #999;
+  margin: 10px 0 5px;
+}
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .title .special {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-right: 5px;
+}
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .title .name {
+  font-size: 1rem;
+  font-weight: 600;
+}
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .location {
+  margin: 3px 0 5px;
+}
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .location .city {
+  font-size: 0.813rem;
+  color: #555;
+}
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .location .more {
+  font-size: 0.813rem;
+  color: #999;
+}
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review {
+  margin-bottom: 15px;
+}
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap {
+  background-color: #ffad0a;
+  padding: 0 1px 3px 4px;
+  border-radius: 5px;
+  margin-right: 7px;
+}
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap i {
+  font-size: 0.688rem;
+}
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap .point {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .comment {
+  font-size: 0.813rem;
+  color: #999;
+}
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .price_info .coupon {
+  font-size: 0.75rem;
+  color: #999;
+  margin-bottom: 3px;
+}
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .price_info .price .now {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .price_info .price .now span {
+  font-size: 0.938rem;
+}
+main .center_container .today_special_wrap .room_box .swiper-wrapper .room .contents .price_info .price .origin {
+  font-size: 0.875rem;
+  color: #999;
+  text-decoration: line-through;
+}
+main .center_container .hot_pension_wrap {
+  margin-bottom: 50px;
+  position: relative;
+}
+main .center_container .hot_pension_wrap .title_box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+main .center_container .hot_pension_wrap .title_box a i {
+  color: #1273e4;
+}
+main .center_container .hot_pension_wrap .box_btn {
+  width: 100%;
+  position: absolute;
+  top: 28%;
+}
+main .center_container .hot_pension_wrap .box_btn div {
+  width: 40px;
+  display: block;
+}
+main .center_container .hot_pension_wrap .box_btn div i {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.24);
+}
+main .center_container .hot_pension_wrap .box_btn .swiper-button-prev05 {
+  position: absolute;
+  left: -20px;
+  z-index: 99;
+}
+main .center_container .hot_pension_wrap .box_btn .swiper-button-prev05::after {
+  display: none;
+}
+main .center_container .hot_pension_wrap .box_btn .swiper-button-next05 {
+  position: absolute;
+  right: -20px;
+  z-index: 99;
+}
+main .center_container .hot_pension_wrap .box_btn .swiper-button-next05::after {
+  display: none;
+}
+main .center_container .hot_pension_wrap .room_box {
+  overflow-x: hidden;
+}
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 240px;
+}
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .photo {
+  width: 100%;
+}
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .photo img {
+  width: 100%;
+  border-radius: 10px;
+}
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .type {
+  font-size: 0.688rem;
+  color: #999;
+  margin: 10px 0 5px;
+}
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .title .special {
+  font-size: 1rem;
+  font-weight: 600;
+}
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .title .name {
+  font-size: 1rem;
+  font-weight: 600;
+}
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .location {
+  margin: 3px 0 5px;
+}
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .location .city {
+  font-size: 0.813rem;
+  color: #555;
+}
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .location .more {
+  font-size: 0.813rem;
+  color: #999;
+}
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review {
+  margin-bottom: 15px;
+}
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap {
+  background-color: #ffad0a;
+  padding: 0 1px 3px 4px;
+  border-radius: 5px;
+  margin-right: 7px;
+}
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap i {
+  font-size: 0.688rem;
+}
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .point_wrap .point {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .title_wrap .review .comment {
+  font-size: 0.813rem;
+  color: #999;
+}
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .price_info .coupon {
+  font-size: 0.75rem;
+  color: #999;
+  margin-bottom: 3px;
+}
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .price_info .price .now {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .price_info .price .now span {
+  font-size: 0.938rem;
+}
+main .center_container .hot_pension_wrap .room_box .swiper-wrapper .room .contents .price_info .price .origin {
+  font-size: 0.875rem;
+  color: #999;
+  text-decoration: line-through;
+}
+main .center_container .black_pick_wrap {
+  position: relative;
+}
+main .center_container .black_pick_wrap .title_box {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+main .center_container .black_pick_wrap .title_box .subj {
+  margin-bottom: 10px;
+}
+main .center_container .black_pick_wrap .title_box p {
+  color: #999;
+}
+main .center_container .black_pick_wrap .box_btn {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+}
+main .center_container .black_pick_wrap .box_btn div {
+  width: 40px;
+  display: block;
+}
+main .center_container .black_pick_wrap .box_btn div i {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.24);
+}
+main .center_container .black_pick_wrap .box_btn .swiper-button-prev06 {
+  position: absolute;
+  left: -20px;
+  z-index: 99;
+}
+main .center_container .black_pick_wrap .box_btn .swiper-button-prev06::after {
+  display: none;
+}
+main .center_container .black_pick_wrap .box_btn .swiper-button-next06 {
+  position: absolute;
+  right: -20px;
+  z-index: 99;
+}
+main .center_container .black_pick_wrap .box_btn .swiper-button-next06::after {
+  display: none;
+}
+main .center_container .black_pick_wrap .black_pick_box {
+  overflow-x: hidden;
+  margin-bottom: 20px;
+}
+main .center_container .black_pick_wrap .black_pick_box .swiper-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+main .center_container .black_pick_wrap .black_pick_box .swiper-wrapper .black_pick_detail {
+  width: 25%;
+}
+main .center_container .black_pick_wrap .black_pick_box .swiper-wrapper .black_pick_detail img {
+  width: 100%;
+  border-radius: 15px;
+}
+main .app_bnr {
+  width: calc(100% - 60px);
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 50px;
+}
+main .app_bnr .app_bnr_img img {
+  width: 100%;
+  border-radius: 20px;
+  height: 344px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .app_bnr .app_txt_box {
+  position: absolute;
+  z-index: 99;
+  top: 40px;
+  left: 50px;
+}
+main .app_bnr .app_txt_box .app_txt {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+main .app_bnr .app_txt_box .app_txt em {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+main .app_bnr .app_txt_box .app_txt span {
+  font-size: 0.875rem;
+  color: #999;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}/*# sourceMappingURL=main.css.map */

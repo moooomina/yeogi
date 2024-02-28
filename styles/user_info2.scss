@@ -1,0 +1,1045 @@
+@import 'common';
+
+main {
+    .container {
+        .wrap {
+            // 쿠폰
+            .coupon {
+                // js
+                > .top {
+                    margin-bottom: 20px;
+                    @include flex-rnsc;
+                    .left {
+                        > h1 {
+                            margin: 0;
+                        }
+                        p {
+                            padding-top: 4px;
+                            color: #999;
+                            font-weight: $weight400;
+                            line-height: 24px;
+                            span {
+                                @extend p ;
+                                padding-top: 0;
+                            }
+                        }
+                    }
+                    .right {
+                        > button {
+                            width: 128px; height: 40px;
+                            background-color: #f2f8ff;
+                            padding:0 14px;
+                            color: #1273e4;
+                            border-radius: 8px;
+                            cursor: pointer;
+                            font-weight: $weight600;
+                        }
+                        > .popup_bg {
+                            background:rgba(0,0,0,0.48);
+                            position:fixed; left:0; top:0; z-index:999;
+                            width:100%; height:100vh;
+                            display:flex; flex-flow:column;
+                            justify-content: center;
+                            // js
+                            .contents {
+                                min-height: 400px;
+                                max-height: 800px;
+                                background-color: #fff;
+                                border-radius: 10px;
+                                box-shadow: 0 2px 16px #00000014;
+                                min-width: 375px;
+                                overflow-y: hidden;
+                                margin: 0 auto;
+                                .top {
+                                    height: 60px; position: sticky; top: 0;
+                                    @include flex-rnsc;
+                                    .close {
+                                        margin: 18px 0 18px 18px;
+                                        cursor: pointer;
+                                        width: 20px; height: 20px;
+                                        i[class*=xmark] {
+                                            font-size: 20px;
+                                        }
+                                    }
+                                    h2 {
+                                        font-weight: $weight600;
+                                        line-height: 19px;
+                                    }
+                                    span {
+                                        margin: 18px 0 18px 18px;
+                                        width: 20px; height: 20px;
+                                    }
+                                }
+                                .text {
+                                    min-height: 252px;
+                                    max-height: 652px;
+                                    padding: 0 20px 96px;
+                                    overflow-y: auto;
+                                    #coupon_code {
+                                        position: relative;
+                                        padding: 12px 0 32px;
+                                        fieldset {
+                                            @include flex-cncf;
+                                            label {
+                                                padding-top: 4px;
+                                                cursor: pointer;
+                                                color: #707070;
+                                                margin-bottom: 4px;
+                                                line-height: 16px;
+                                                font-size: $small13;
+                                                font-weight: $weight600;
+                                            }
+                                            input {
+                                                border: 1.5px solid #f5f5f5;
+                                                background-color: #f5f5f5;
+                                                border-radius: 8px;
+                                                height: 48px;
+                                                width: 100%;
+                                                padding: 0 18px;
+                                            }
+                                            input::placeholder {
+                                                color: #c2c2c2;
+                                            }
+                                            input:hover {
+                                                background-color: #ededed;
+                                            }
+                                            input:focus {
+                                                background-color: #fff;
+                                            }
+                                            .active {
+                                                outline:1px solid #333;
+                                                background-color: #fff;
+                                            }
+                                            .error_input {
+                                                border: 1px solid #f45858;
+                                            }
+                                            .text_delete {
+                                                position: absolute; top:51px; right:13px;
+                                                cursor: pointer;
+                                                i[class*=xmark] {
+                                                    color:#c2c2c2;
+                                                    font-size: 16px;
+                                                }
+                                            }
+                                            .error_message {
+                                                color: #f45858;
+                                                margin: 4px 0;
+                                                font-size:$subC14 ;
+                                                display: block;
+                                            }
+                                        }
+                                    }
+                                }
+                                .btn {
+                                    position: sticky; bottom: 0;
+                                    padding: 20px;
+                                    .completion_btn {
+                                        display: block;
+                                        padding: 0 18px;
+                                        color: #d6d6d6;
+                                        background-color: #fafafa;
+                                        cursor: not-allowed;
+                                        border-radius: 10px;
+                                        width: 100%; height: 48px;
+                                        line-height: 19px;
+                                    }
+                                    button.active {
+                                        background-color: #1273e4;
+                                        color: #fff;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .contents_coupon {
+                    margin-right: 20px;
+                    .coupon_filter {
+                        @include flex-rnsc;
+                        margin-top: 20px;
+                        .left {
+                            padding: 6px 0 20px;
+                            p {
+                                color: #707070;
+                                font-size: $subC14;
+                                font-weight: $weight500;
+                                span {
+                                    @extend p ;
+                                }
+                            }
+                        }
+                        .filter_now {
+                            position: relative;
+                            padding: 6px 0 20px;
+                            > button {
+                                @extend .filter_now;
+                                cursor: pointer;
+                                span {
+                                    font-size: $subC14;
+                                    font-family: $familySemiBold;
+                                }
+                                i[class*=right] {
+                                    margin-top: 4px;
+                                    font-size: 12px;
+                                }
+                            }
+                            .filter_option {
+                                z-index: 999;
+                                position: absolute; right: 0;
+                                width: 168px; background-color: #fff;
+                                border-radius: 8px;
+                                box-shadow: 0 2px 16px #00000014;
+                                padding: 8px 0;
+                                @include flex-cncf;
+                                button {
+                                    z-index: 99;
+                                    @include flex-rnsc;
+                                    width: 100%;
+                                    color: #000c;
+                                    height: 36px;
+                                    padding: 0 16px;
+                                    line-height: 22px;
+                                    font-size: $subC14;
+                                    font-weight: $weight700;
+                                    i[class*=check] {
+                                        display: none;
+                                    }
+                                }
+                                .active {
+                                    color: #1273e4;
+                                    font-weight: $weight700;
+                                    i[class*=check] {
+                                        display: block;
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    // 쿠폰 있을때
+                    .wrap_contents {
+                        .coupon_grid {
+                            display: grid;
+                            grid-template-columns: repeat(2,1fr);
+                            .coupon_item {
+                                margin-right: 20px;
+                                margin-bottom: 20px;
+                                border: 1px solid #ebebeb;
+                                border-radius: 12px;
+                                padding: 24px;
+                                overflow: hidden;
+                                position: relative;
+                                section {
+                                    .percent_num {
+                                        p {
+                                            color: $subColor-r;
+                                            font-size: $title24;
+                                            font-weight: $weight400;
+                                            span {
+                                                color: $subColor-r;
+                                                font-weight: $weight700;
+                                                font-size: $title32;
+                                            }
+                                        }
+                                    }
+                                    .max_sale {
+                                        p {
+                                            color: $subColor-r;
+                                            span {
+                                                color: $subColor-r;
+                                            }
+                                        }
+                                    }
+                                    .day {
+                                        margin-bottom: 6px;
+                                        em {
+                                            color: $subColor-r;
+                                            font-size: $small13;
+                                            font-weight: $weight700;
+                                            span {
+                                                @extend em ;
+                                            }
+                                        }
+                                        > span {
+                                            color: #707070;
+                                            margin-left: 8px;
+                                            font-size: $small13;
+                                        }
+                                    }
+                                }
+                                section:nth-child(2) {
+                                    margin-top: 16px;
+                                    em {
+                                        font-size: $subT15;
+                                        font-weight: $weight600;
+                                    }
+                                    p {
+                                        color: #707070;
+                                        margin-bottom: 12px;
+                                        font-size: $subC14;
+                                        line-height: 20px;
+                                        span {
+                                            color: #707070;
+                                            font-size: $subC14;
+                                        }
+                                    }
+                                }
+                                .use_info {
+                                    color: #999;
+                                    cursor: pointer;
+                                    font-size: $subC14;
+                                    font-weight: $weight600;
+                                    i[class*=right] {
+                                        font-size: 10px;
+                                        width: 16px; height: 17px;
+                                    }
+                                }
+                                a {
+                                    position: absolute; bottom: 13px; right: 24px;
+                                    padding: 0 14px;
+                                    width: auto; background-color: #f2f8ff;
+                                    color: #1273e4; border-radius: 8px;
+                                    height: 40px; cursor: pointer;
+                                    line-height: 40px;
+                                    font-size: $subC14;
+                                    font-weight: $weight600;
+                                }
+                            }
+                        }
+                        > .popup_bg {
+                            background:rgba(0,0,0,0.48);
+                            position:fixed; left:0; top:0; z-index:999;
+                            width:100%; height:100vh;
+                            display:flex; flex-flow:column;
+                            justify-content: center; align-items: center;
+                            // js
+                            .popup_coupon {
+                                min-height: 400px; width: 375px;
+                                max-height: 800px;
+                                background-color: #fff;
+                                border-radius: 10px;
+                                box-shadow: 0 2px 16px #00000014;
+                                overflow-y: hidden;
+                                .top {
+                                    @include flex-rnsc;
+                                    height: 60px;
+                                    position: sticky; top: 0;
+                                    span {
+                                        font-weight: $weight600;
+                                    }
+                                    .close {
+                                        margin: 18px 0 18px 18px;
+                                        cursor: pointer;
+                                        i[class*=xmark] {
+                                            color: #333;
+                                            font-size: 20px;
+                                        }
+                                    }
+                                    span:last-of-type {
+                                        margin: 18px 0 18px 18px;
+                                        width: 20px;
+                                    }
+                                }
+                                .important_box {
+                                    padding: 0 20px 96px;
+                                    overflow-y: auto;
+                                    section {
+                                        .percent_num {
+                                            p {
+                                                color: $subColor-r;
+                                                font-size: $title24;
+                                                font-weight: $weight400;
+                                                span {
+                                                    color: $subColor-r;
+                                                    font-weight: $weight700;
+                                                    font-size: $title32;
+                                                }
+                                            }
+                                        }
+                                        .max_sale {
+                                            p {
+                                                color: $subColor-r;
+                                                span {
+                                                    color: $subColor-r;
+                                                }
+                                            }
+                                        }
+                                        .day {
+                                            margin-bottom: 6px;
+                                            em {
+                                                color: $subColor-r;
+                                                font-size: $small13;
+                                                font-weight: $weight700;
+                                                span {
+                                                    @extend em ;
+                                                }
+                                            }
+                                            > span {
+                                                color: #707070;
+                                                margin-left: 8px;
+                                                font-size: $small13;
+                                                font-weight: $weight400;
+                                            }
+                                        }
+                                    }
+                                    section:nth-child(2) {
+                                        margin-top: 16px;
+                                        em {
+                                            font-size: $subT15;
+                                            font-weight: $weight600;
+                                        }
+                                        p {
+                                            display: flex; flex-flow: column;
+                                            color: #707070;
+                                            margin-bottom: 12px;
+                                            font-size: $small13;
+                                            font-weight: $weight400;
+                                            span {
+                                                color: #707070;
+                                                font-size: $small13;
+                                                font-weight: $weight400;
+                                            }
+                                        }
+                                    }
+                                    > span {
+                                        content: ''; display: block;
+                                        background-color: #ebebeb;
+                                        height: 1px; width: 100%;
+                                        margin: 24px 0 16px;
+                                    }
+                                    .box {
+                                        margin-top: 2px;
+                                        color: #707070;
+                                        line-height: 1.54;
+                                        font-size: $small13;
+                                        font-weight: $weight400;
+                                        p {
+                                            @extend .box ;
+                                            span {
+                                                @extend .box ;
+                                            }
+                                        }
+                                    }
+                                }
+                                .btn{
+                                    position: sticky; bottom: 0;
+                                    padding: 20px;
+                                    
+                                    a {
+                                        cursor: pointer;
+                                        text-align: center;
+                                        display: block;
+                                        margin-top: 30px;
+                                        background-color: #1273e4;
+                                        border-radius: 10px;
+                                        height: 48px; line-height: 48px;
+                                        padding: 0 18px;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    // 쿠폰 없을때
+                    .coupon_zero {
+                        margin-top: 96px;
+                        text-align: center;
+                        h2 {
+                            color: #999;
+                            margin-bottom: 8px;
+                            font-size: 1.25rem;
+                            font-weight: $weight700;
+                        }
+                        p {
+                            color: #c2c2c2;
+                            margin-bottom: 8px;
+                            font-size: $subC14;
+                            font-weight: $weight400;
+                        }
+                    }
+                }
+            }
+            // 내 정보 관리
+            .user_info {
+                // js
+                // display: none;
+                #user_info_from {
+                    fieldset {
+                        .info_text {
+                            @include flex-rnsc;
+                            > .left {
+                                h2 {
+                                    margin-bottom: 8px;
+                                    font-size: $title18;
+                                    font-weight: $weight700;
+                                }
+                                p {
+                                    color: #999;
+                                    font-size: $subC14;
+                                }
+                            }
+                            > .right {
+                                img {
+                                    width: 72px; height: auto;
+                                }
+                            }
+                        }
+                        // 정보 안보일 때
+                        .view_user_info {
+                            > .top_contents {
+                                @include flex-rnsc;
+                                margin-top: 16px;
+                                background-color: #f5f7fa;
+                                border-radius: 12px;
+                                height: 58px;
+                                padding: 12px 16px;
+                                > .left {
+                                    display: flex; flex-flow: row;
+                                    i[class*=lock] {
+                                        margin-right: 10px;
+                                        height: 28px; width: 28px;
+                                        border-radius: 50%; background-color: #1273e4;
+                                        color: #fff; text-align: center;
+                                        line-height: 27px;
+                                    }
+                                    p {
+                                        color: #49627a;
+                                        font-size: $subC14;
+                                        font-weight: $weight600;
+                                        align-self: center;
+                                    }
+                                }
+                                > .right {
+                                    .checkbox-wrapper-6 {
+                                        .tgl-btn.active::after {
+                                            left: 48%;
+                                        }
+                                        .tgl-btn.active {
+                                            background: #1273e4;
+                                        }
+                                    }
+                                }
+                            }
+                            .user_text {
+                                border-bottom: 1px solid #ebebeb;
+                                display: grid;
+                                grid-template-columns: repeat(2,50%);
+                                gap: 20px;
+                                padding: 20px 0 24px;
+                                .box {
+                                    h3 {
+                                        padding-top: 4px;
+                                        color: #707070;
+                                        margin-bottom: 4px;
+                                        font-size: $small13;
+                                        font-weight: $weight600;
+                                    }
+                                    p { 
+                                        height: 48px;
+                                        input {
+                                            border-radius: 8px;
+                                            line-height: 48px;
+                                            color: #d6d6d6;
+                                            background-color: #fafafa;
+                                            border: 1.5px solid #fafafa;
+                                            padding: 0 18px;
+                                            width: 100%; height: 100%;
+                                        }
+                                    }
+                                    .active {
+                                        outline:1px solid #333;
+                                        background-color: #fff;
+                                    }
+                                }
+                            }
+                            .not_view {
+                                .box {
+                                    p {
+                                        input{cursor: not-allowed;}
+                                        }
+                                }
+                            }
+                            .view {
+                                position: relative;
+                                .box {
+                                    p {
+                                        input {
+                                            color: #333;
+                                        }
+                                    }
+                                }
+                                .nickname {
+                                    p {
+                                        input:hover {
+                                            background-color: #ededed;
+                                        }
+                                        input:focus {
+                                            outline: 1px solid #333;
+                                            background-color: #fff;
+                                        }
+                                    }
+                                }
+                                .user_email {
+                                    p {
+                                        input:hover {
+                                            background-color: #ededed;
+                                        }
+                                        input:focus {
+                                            outline: 1px solid #333;
+                                            background-color: #fff;
+                                        }
+                                    }
+                                }
+                                .user_birthday {
+                                    p {
+                                        input {
+                                            cursor: not-allowed;
+                                        }
+                                    }
+                                }
+                                .user_gender {
+                                    p {
+                                        input {cursor: not-allowed;}
+                                    }
+                                }
+                                .user_phone {
+                                    .phone_wrap {
+                                        p {
+                                            background:transparent ;
+                                            margin-bottom: 20px;
+                                            padding: 0;
+                                            border: 0;
+                                            .input_wrap {
+                                                display: flex;
+                                                width: 100%; height: 100%;
+                                                position: relative;
+                                                input {
+                                                    background-color: #fafafa;
+                                                    border: 1.5px solid #fafafa;
+                                                    height: 48px;
+                                                    border-radius: 8px;
+                                                    line-height: 48px;
+                                                    width: 100%;
+                                                }
+                                                input:hover {
+                                                    background-color: #ededed;
+                                                }
+                                                input:focus {
+                                                    background-color: #fff;
+                                                }
+                                                .active {
+                                                    outline:1px solid #333;
+                                                    background-color: #fff;
+                                                    color: #333;
+                                                }
+                                                .error_input {border: 1px solid #f45858;}
+                                                button {
+                                                    position: absolute; bottom: 8px; right: 0;
+                                                    transform: translateY(-50%);
+                                                    cursor: pointer; width: 120px;
+                                                    font-size: $subC14;
+                                                    color:#1273e4; 
+                                                    font-family: $familySemiBold;
+                                                    text-align: right; margin-right: 15px;
+                                                }
+                                                span {
+                                                    position: absolute; bottom: 5px; right: 0;
+                                                    transform: translateY(-50%); width: 120px;
+                                                    color: #f7323f; font-family: $familySemiBold;
+                                                    text-align: right; margin-right: 15px;
+                                                }
+                                            }
+                                        }
+                                        p:last-of-type {margin-bottom: 10px;}
+                                        .error_message {
+                                            color: #f45858;
+                                            margin: 4px 0;
+                                            font-size:$subC14 ;
+                                            display: block;
+                                        }
+                                        #resend {
+                                            float: right;
+                                            font-family: $familySemiBold;
+                                            text-decoration: underline;
+                                            font-size: $subC14; margin-right: 10px;
+                                            margin-bottom: 20px;
+                                        }
+                                        #check_btn {
+                                            cursor: not-allowed;
+                                            color: #d6d6d6;
+                                            background-color: #fafafa;
+                                            border-radius: 10px;
+                                            height: 56px; 
+                                            padding: 0 20px;
+                                            width: 100%;
+                                            font-size: $title18;
+                                            font-weight: $weight600;
+                                        }
+                                        #check_btn.active {
+                                            outline: none;
+                                            background-color: #1273e4;
+                                            color: #fff;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+                                .btn_wrap {
+                                    button {
+                                        background-color: #1273e4;
+                                        color: #fff; border-radius: 10px;
+                                        padding: 10px;  
+                                        position: absolute; right: 0;
+                                        bottom: 0; margin:15px 10px;
+                                    }
+                                }
+                            }
+                        }
+                        // 팝업
+                        > .popup_bg {
+                            background:rgba(0,0,0,0.48);
+                            position:fixed; left:0; top:0; z-index:999;
+                            width:100%; height:100vh;
+                            display:flex; flex-flow:column;
+                            justify-content: center; align-items: center;
+                            // js
+                            .popup_use {
+                                min-height: 400px;
+                                max-height: 800px;
+                                background-color: #fff;
+                                border-radius: 10px;
+                                box-shadow: 0 2px 16px #00000014;
+                                min-width: 375px;
+                                overflow-y: hidden;
+                                margin: 0 auto;
+                                .top {
+                                    height: 60px; position: sticky; top: 0;
+                                    @include flex-rnsc;
+                                    .close {
+                                        margin: 18px 0 18px 18px;
+                                        cursor: pointer;
+                                        width: 20px; height: 20px;
+                                        i[class*=xmark] {
+                                            font-size: 20px;
+                                        }
+                                    }
+                                    h2 {
+                                        font-weight: $weight600;
+                                        line-height: 19px;
+                                    }
+                                    span {
+                                        margin: 18px 0 18px 18px;
+                                        width: 20px; height: 20px;
+                                    }
+                                }
+                                .text {
+                                    min-height: 244px;
+                                    max-height: 644px;
+                                    padding: 0 20px 96px;
+                                    overflow-y: auto;
+                                    .phone_num {
+                                        .phone_certified {
+                                            margin-top: 12px;
+                                            .box {
+                                                display: flex; flex-flow: column nowrap;
+                                                position: relative;
+                                                label {
+                                                    padding-top: 4px;
+                                                    color: #707070;
+                                                    margin-bottom: 4px;
+                                                    cursor: pointer;
+                                                    font-size: $small13;
+                                                    font-weight: $weight600;
+                                                }
+                                                input {
+                                                    border: 1.5px solid #f5f5f5;
+                                                    background: #f5f5f5;
+                                                    border-radius: 8px;
+                                                    height: 48px;
+                                                    padding: 0 18px;
+                                                }
+                                                input:hover {
+                                                    background-color: #ededed;
+                                                }
+                                                input:focus {
+                                                    background-color: #fff;
+                                                }
+                                                .active {
+                                                    outline:1px solid #333;
+                                                    background-color: #fff;
+                                                }
+                                                .error_input {
+                                                    border: 1px solid #f45858;
+                                                }
+                                                .text_delete {
+                                                    position: absolute; top:40px; right:13px;
+                                                    cursor: pointer;
+                                                    i[class*=xmark] {
+                                                        color:#c2c2c2;
+                                                        font-size: 16px;
+                                                    }
+                                                }
+                                                .error_message {
+                                                    color: #f45858;
+                                                    margin: 4px 0;
+                                                    font-size:$subC14 ;
+                                                    display: block;
+                                                }
+                                                p {
+                                                    margin-top: 4px;
+                                                    font-size: $small12;
+                                                    font-weight: $weight400;
+                                                    padding-bottom: 2px;
+                                                    color: #999;
+                                                }
+                                            }
+                                        }
+                                        section {
+                                            background-color: #f5f7fa;
+                                            border-radius:8px ;
+                                            margin-top: 18px;
+                                            padding: 16px 20px;
+                                            h3 {
+                                                color: #49627a;
+                                                margin-bottom: 8px;
+                                                font-size: $small13;
+                                                font-weight: $weight700;
+                                            }
+                                            p {
+                                                display: flex;
+                                                color: #707070;
+                                                margin-bottom: 8px;
+                                                font-size: $small12;
+                                                font-weight: $weight400;
+                                            }
+                                            p::before {
+                                                color: #9aa9b8;
+                                                content: '•';
+                                                display: block;
+                                                width: 9px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .btn {
+                                    position: sticky; bottom: 0;
+                                    margin: 20px;
+                                    button {
+                                        cursor: not-allowed;
+                                        color: #d6d6d6;
+                                        background-color: #fafafa;
+                                        border-radius: 10px;
+                                        height: 56px; 
+                                        padding: 0 20px;
+                                        width: 100%;
+                                        font-size: $title18;
+                                        font-weight: $weight600;
+                                    }
+                                    .active {
+                                        background-color: #1273e4;
+                                        color: #fff;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .access_device_management {
+                    border-bottom: 1px solid #ebebeb;
+                    .contents_logout {
+                        > .top {
+                            @include flex-rnsc;
+                            margin-top: 16px;
+                            height: 45px;
+                            h2 {
+                                font-size: $title18;
+                                font-weight: $weight700;
+                            }
+                            .all_logout_btn {
+                                color: #1273e4;
+                                cursor: pointer;
+                                font-size: $subC14;
+                                font-weight: 600;
+                            }
+                        }
+                        > p {
+                            color: #999;
+                            margin-bottom: 24px;
+                            font-size: $subC14;
+                            font-weight: $weight400;
+                        }
+                    }
+                    > .popup_bg {
+                        background:rgba(0,0,0,0.48);
+                        position:fixed; left:0; top:0; z-index:999;
+                        width:100%; height:100vh;
+                        display:flex; flex-flow:column;
+                        justify-content: center; align-items: center;
+                        // js
+                        .popup_logout {
+                            background-color: #fff;
+                            border-radius: 10px;
+                            box-shadow: 0 2px 16px #00000014;
+                            padding-top: 16px;
+                            width: 335px;
+                            p {
+                                overflow-y: auto;
+                                padding: 8px 20px 4px;
+                            }
+                            .btn {
+                                margin: 20px 0;
+                                padding: 0 20px;
+                                @include flex-rnsc;
+                                button {
+                                    border-radius: 10px;
+                                    padding: 0 18px;
+                                    width: 100%;
+                                    cursor: pointer;
+                                    font-weight: $weight600;
+                                    height: 48px;
+                                }
+                                .cancellation_btn {
+                                    margin-right: 8px;
+                                    background-color: #ebebeb;
+                                }
+                                .completion_btn {
+                                    background-color: #1273e4;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+                .user_withdrawal {
+                    margin-top: 32px;
+                    span {
+                        color: #c2c2c2;
+                        margin-right: 6px;
+                        font-size: $subC14;
+                    }
+                    a {
+                        color: #999;
+                        cursor: pointer;
+                        font-size: $subC14;
+                        font-weight: $weight600;
+                    }
+                }
+                
+            }
+            // 설정
+            .setting {
+                // js
+                // display: none;
+                .top {
+                    margin-bottom: 20px;
+                    > h1 {
+                        margin: 0;
+                    }
+                    p {
+                        margin-top: 4px;
+                        color: #999;
+                    }
+                }
+                .agree_marketing {
+                    margin: 20px 0;
+                    #marketint_form {
+                        fieldset {
+                            // 공통
+                            .box {
+                                margin: 6px 0;
+                                @include flex-rnfc;
+                                img {
+                                    margin:0 5px 0 6px;
+                                    width: 10px;
+                                    height: 10px;
+                                }
+                            }
+                            .marketing_notifications {
+                                a {
+                                    font-weight: $weight500;
+                                    text-decoration: underline;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+                .btn {
+                    border-top: 1px solid #ebebeb;
+                    height: 72px; width: 100%;
+                    display: flex; align-items: center;
+                    justify-content: flex-end;
+                    .storage_btn {
+                        width: 128px; height: 40px;
+                        background-color: #1273e4;
+                        border-radius: 8px; padding: 0 14px;
+                        color: #fff; cursor: pointer;
+                        font-size: $subC14;
+                        font-weight: $weight600;
+                    }
+                    .popup_bg {
+                            background:rgba(0,0,0,0.48);
+                            position:fixed; left:0; top:0; z-index:999;
+                            width:100%; height:100vh;
+                            display:flex; flex-flow:column;
+                            justify-content: center;
+                        .contents {
+                                background-color: #fff;
+                                width: 335px; padding-top: 16px;
+                                border-radius: 10px;
+                                box-shadow: 0 2px 16px #00000014;
+                                overflow-y: hidden;
+                                margin: 0 auto;
+                                padding: 0 20px;
+                            h2 {
+                                color: #333;
+                                line-height: 21px;
+                                margin: 12px 0 8px;
+                                font-size: $title18;
+                                font-family: $familyBold;
+                            }
+                            ul {
+                                padding: 8px 20px 4px;
+                                max-height: 355px;
+                                overflow-y: auto;
+                                li {
+                                    display: flex; align-items: center;
+                                    color: #707070;
+                                    padding: 4px 0 2px;
+                                    line-height: 24px;
+                                    font-family: $familyMedium;
+                                    span {
+                                        color: #707070;
+                                        padding: 4px 0 2px;
+                                        line-height: 24px;
+                                        font-family: $familyMedium;
+                                        margin-left: 5px;
+                                    }
+                                }
+                                li::before {
+                                    content: '•';
+                                    color: #9aa9b8;
+                                    display: block;
+                                    width: 12px;
+                                }
+                            }
+                            .completion_btn {
+                                margin: 20px 0;
+                                cursor: pointer;
+                                height: 48px; 
+                                color: #fff;
+                                background-color: #1273e4;
+                                border-radius: 10px;
+                                padding: 0 18px;
+                                width: 100%;
+                                font-weight: $weight600;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

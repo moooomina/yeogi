@@ -1,0 +1,112 @@
+main {
+  max-width: 1400px;
+}
+main .login_container {
+  margin: 0 auto;
+  width: 400px;
+  padding: 16px 0 20px;
+}
+main .login_container h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+main .login_container .contents #login_frm fieldset .input .id_pw {
+  margin-bottom: 20px;
+}
+main .login_container .contents #login_frm fieldset .input .id_pw div h2 {
+  font-size: 0.813rem;
+  margin-bottom: 5px;
+}
+main .login_container .contents #login_frm fieldset .input .id_pw div h2::after {
+  content: "";
+  display: inline-block;
+  background-color: #f45858;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  position: relative;
+  top: -8px;
+}
+main .login_container .contents #login_frm fieldset .input .id_pw div p input {
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 48px;
+  border-radius: 10px;
+  padding: 0 20px;
+}
+main .login_container .contents #login_frm fieldset .input .id_pw div p input::-moz-placeholder {
+  color: #bdbdbd;
+}
+main .login_container .contents #login_frm fieldset .input .id_pw div p input::placeholder {
+  color: #bdbdbd;
+}
+main .login_container .contents #login_frm fieldset .input .id_pw div .error_massage {
+  color: #f45858;
+  margin-bottom: 20px;
+}
+main .login_container .contents #login_frm fieldset .input .user_setting .keep_reset {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+main .login_container .contents #login_frm fieldset .input .user_setting .keep_reset label, main .login_container .contents #login_frm fieldset .input .user_setting .keep_reset label span, main .login_container .contents #login_frm fieldset .input .user_setting .keep_reset label #keep_login span, main .login_container .contents #login_frm fieldset .input .user_setting .keep_reset label span span, main .login_container .contents #login_frm fieldset .input .user_setting .keep_reset label #keep_login {
+  display: inline-block;
+}
+main .login_container .contents #login_frm fieldset .input .user_setting .keep_reset label #keep_login {
+  margin-right: 5px;
+}
+main .login_container .contents #login_frm fieldset .input .user_setting .keep_reset label span, main .login_container .contents #login_frm fieldset .input .user_setting .keep_reset label span span, main .login_container .contents #login_frm fieldset .input .user_setting .keep_reset label span span span, main .login_container .contents #login_frm fieldset .input .user_setting .keep_reset label #keep_login span {
+  font-size: 0.813rem;
+  color: #333333;
+}
+main .login_container .contents #login_frm fieldset .input .user_setting .keep_reset .pw_reset {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #999999;
+}
+main .login_container .contents #login_frm fieldset .input .user_setting .keep_reset .pw_reset:hover {
+  color: #bdbdbd;
+}
+main .login_container .contents #login_frm fieldset .input .user_setting .notice {
+  background-color: #f5f7fa;
+  padding: 16px 20px 25px;
+}
+main .login_container .contents #login_frm fieldset .input .user_setting .notice em {
+  color: #49627a;
+  font-size: 0.813rem;
+  font-weight: 700;
+  display: block;
+}
+main .login_container .contents #login_frm fieldset .input .user_setting .notice span {
+  color: #707070;
+  font-size: 0.75rem;
+}
+main .login_container .contents #login_frm fieldset .btn_wrap {
+  margin: 25px 0 35px;
+}
+main .login_container .contents #login_frm fieldset .btn_wrap #login_btn {
+  width: 100%;
+  height: 56px;
+  background-color: #fafafa;
+  color: #d6d6d6;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+main .login_container .join {
+  text-align: center;
+}
+main .login_container .join p {
+  color: rgba(0, 0, 0, 0.4784313725);
+  font-size: 0.875rem;
+}
+main .login_container .join .go_join {
+  color: #333333;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 10px;
+  display: block;
+}/*# sourceMappingURL=login.css.map */

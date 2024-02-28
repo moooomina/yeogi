@@ -1,0 +1,266 @@
+main {
+  max-width: 1400px;
+  padding: 20px 0 96px;
+  margin: 0 auto;
+}
+main .container {
+  margin: 0 auto;
+}
+main .container section {
+  padding: 16px 0 20px;
+}
+main .container section h1 {
+  margin: 2px 0 2px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+main .container section p {
+  margin-top: 4px;
+  line-height: 1.5rem;
+  color: #999999;
+}
+main .container .wrap {
+  padding: 35px 30px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f7fa;
+  border-radius: 10px;
+}
+main .container .wrap .left .tel_btn {
+  margin-bottom: 8px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+main .container .wrap .left .tel_btn i[class*=phone] {
+  font-size: 15px;
+  margin-right: 8px;
+  color: rgb(194, 194, 194);
+}
+main .container .wrap .left p {
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  color: #999999;
+}
+main .container .wrap .right {
+  position: relative;
+}
+main .container .wrap .right .chatting_consultation {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  height: 48px;
+  border-radius: 10px;
+  border: 2px solid rgb(235, 235, 235);
+  font-weight: 600;
+  background-color: #fff;
+  padding: 10px 18px 10px 16px;
+}
+main .container .wrap .right .chatting_consultation i[class*=comment] {
+  margin-right: 8px;
+  font-size: 16px;
+  color: rgb(194, 194, 194);
+}
+main .container .wrap .right .chatting_consultation p {
+  color: rgb(51, 51, 51);
+  font-weight: 600;
+}
+main .container .wrap .right .chat_container {
+  position: fixed;
+  top: 150px;
+  right: 0;
+  width: 400px;
+  height: 600px;
+  border-radius: 15px;
+  border: 2px solid #f5f7fa;
+}
+main .container .wrap .right .chat_container > .top {
+  background-color: #fff;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  height: 40px;
+  align-items: center;
+}
+main .container .wrap .right .chat_container > .top i[class*=left] {
+  margin: 0 10px;
+  font-size: 15px;
+}
+main .container .wrap .right .chat_container > .top h2 {
+  font-weight: 600;
+}
+main .container .wrap .right .chat_container .chat_message {
+  display: flex;
+  flex-direction: column;
+  background-color: #f45858;
+  height: 455px;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 15px;
+}
+main .container .wrap .right .chat_container .chat_message .message {
+  border-radius: 5px;
+  padding: 10px 5px;
+  margin-bottom: 10px;
+  color: #fff;
+  width: 80%;
+}
+main .container .wrap .right .chat_container .chat_message .ai_message {
+  align-self: flex-start;
+  background-color: #999999;
+}
+main .container .wrap .right .chat_container .chat_message .user_message {
+  background-color: #1273e4;
+  align-self: flex-end;
+}
+main .container .wrap .right .chat_container .user_input {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100px;
+  background-color: #fff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+main .container .wrap .right .chat_container .user_input #user_txt {
+  width: calc(100% - 60px);
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: 75%;
+  padding: 5px 10px;
+  overflow-x: hidden;
+  border: none;
+  outline: none;
+  resize: none;
+}
+main .container .wrap .right .chat_container .user_input .chat_btn {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  background-color: #1273e4;
+  color: #fff;
+  width: 60px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+main .container .inquiry section h2 {
+  margin-top: 20px;
+  padding: 16px 0;
+  font-size: 1.25rem;
+  font-family: PretendardBold;
+}
+main .container .inquiry section ul {
+  margin-bottom: 8px;
+  display: flex;
+  flex-flow: row wrap;
+  overflow: auto;
+  gap: 6px 8px;
+}
+main .container .inquiry section ul li {
+  display: flex;
+  align-items: center;
+  padding-bottom: 12px;
+  height: 32px;
+  max-width: 212px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border: 2px solid #f5f7fa;
+  color: #fff;
+  border-radius: 100px;
+}
+main .container .inquiry section ul li button {
+  font-size: 0.938rem;
+  font-family: PretendardSemiBold;
+}
+main .container .inquiry section ul li:first-of-type {
+  background-color: #1273e4;
+}
+main .container .inquiry section ul li:first-of-type button {
+  color: #fff;
+}
+main .container .inquiry .box ul {
+  width: 100%;
+  overflow: hidden;
+}
+main .container .inquiry .box ul li .btn {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f5f7fa;
+  padding: 20px 0;
+}
+main .container .inquiry .box ul li .btn .left {
+  line-height: 1.5rem;
+}
+main .container .inquiry .box ul li .btn .left span {
+  margin-right: 8px;
+  padding: 0 6px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #c2c2c2;
+}
+main .container .inquiry .box ul li .btn .left p {
+  font-weight: 600;
+}
+main .container .inquiry .box ul li .btn .right {
+  color: #c2c2c2;
+  font-size: 12px;
+}
+main .container .inquiry .box ul li .contents {
+  transform: all 0.3s ease-in-out;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+main .container .inquiry .box ul li .contents .box {
+  margin-bottom: 20px;
+}
+main .container .inquiry .box ul li .contents .box em {
+  font-size: 0.938rem;
+  line-height: 1.375rem;
+  color: #252525;
+  font-weight: 600;
+}
+main .container .inquiry .box ul li .contents .box p {
+  font-size: 0.938rem;
+  line-height: 1.375rem;
+  color: #252525;
+  margin: 0;
+}
+main .container .inquiry .box ul li .contents .box:last-child {
+  margin: 0;
+}
+main .container .inquiry .box ul li .contents p {
+  font-size: 0.938rem;
+  line-height: 1.375rem;
+  color: #252525;
+  margin-bottom: 20px;
+}
+main .container .inquiry .box ul li .contents p:last-child {
+  margin: 0;
+}
+
+@media screen and (max-width: 1199px) {
+  main {
+    max-width: 1200px;
+  }
+}
+@media screen and (max-width: 899px) {
+  main {
+    max-width: 900px;
+  }
+}
+@media screen and (max-width: 599px) {
+  main {
+    max-width: 600px;
+  }
+}/*# sourceMappingURL=customer_service.css.map */

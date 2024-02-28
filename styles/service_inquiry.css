@@ -1,0 +1,168 @@
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 0 96px;
+}
+main .business_inquiry_container {
+  width: 70%;
+  margin: 0 auto 50px;
+}
+main .business_inquiry_container .business_inquiry_bg .business_inquiry_top {
+  display: flex;
+  flex-flow: column nowrap;
+}
+main .business_inquiry_container .business_inquiry_bg .business_inquiry_top img {
+  width: 100%;
+}
+main .business_inquiry_container .business_inquiry_bg .business_inquiry_top a {
+  display: flex;
+  flex-flow: column nowrap;
+}
+main .business_inquiry_container .business_inquiry_bg .business_inquiry_top a span {
+  display: block;
+  width: 100%;
+  height: 150px;
+  background-color: #e4e4e4;
+}
+main .new_inquiries_container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 0 30px 0;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset h1 {
+  font-size: 1.125rem;
+  font-family: PretendardBold;
+  margin-bottom: 20px;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .new_inquiries_box .new_inquiries {
+  margin-bottom: 20px;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .new_inquiries_box .new_inquiries input {
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 48px;
+  border-radius: 7px;
+  padding: 0 20px;
+  font-weight: 600;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .new_inquiries_box .new_inquiries input::-moz-placeholder {
+  color: #bdbdbd;
+  font-weight: 300;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .new_inquiries_box .new_inquiries input::placeholder {
+  color: #bdbdbd;
+  font-weight: 300;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .new_inquiries_box .new_inquiries .subj {
+  font-size: 0.813rem;
+  font-family: PretendardSemiBold;
+  margin-bottom: 5px;
+  display: block;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .new_inquiries_box .new_inquiries .subj::after {
+  content: "";
+  display: inline-block;
+  background-color: #f45858;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  position: relative;
+  top: -8px;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .new_inquiries_box .new_inquiries .reset {
+  display: none;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .new_inquiries_box .new_inquiries:nth-child(2) .subj::after,
+main .new_inquiries_container #new_inquiries_frm fieldset .new_inquiries_box .new_inquiries:nth-child(5) .subj::after {
+  display: none;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .question {
+  background-color: #f5f7fa;
+  border-radius: 5px;
+  padding: 20px;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .question span {
+  font-size: 0.75rem;
+  color: #777;
+  line-height: 1rem;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .question span em {
+  font-size: 0.813rem;
+  color: #49627a;
+  font-family: PretendardSemiBold;
+  display: block;
+  margin-bottom: 10px;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container {
+  margin-top: 30px;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_agree {
+  display: flex;
+  justify-content: space-between;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_agree label .agreement {
+  display: flex;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_agree label .agreement em {
+  font-size: 0.875rem;
+  color: #f7323f;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_agree label .agreement span {
+  font-size: 0.875rem;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_agree .more_btn i[class*=angle] {
+  color: #bdbdbd;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_more {
+  width: 100%;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_more p {
+  color: #707070;
+  font-size: 0.875rem;
+  margin-bottom: 20px;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_more .personal_info, main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_more th, main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_more td {
+  border: 1px solid #bdbdbd;
+  padding: 10px;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_more .personal_info {
+  width: 100%;
+  border-collapse: collapse;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_more .personal_info thead tr th {
+  color: #707070;
+  text-align: center;
+  font-size: 0.813rem;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_more .personal_info tbody tr td {
+  color: #707070;
+  font-size: 0.75rem;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .consent_use_container .consent_use_more .personal_info tbody tr td em {
+  color: #707070;
+  font-size: 0.75rem;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .inquire {
+  width: 100%;
+  margin-top: 30px;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .inquire .inquire_btn {
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+  color: #d6d6d6;
+  font-weight: 600;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .precautions {
+  margin-top: 30px;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .precautions h2 {
+  font-size: 0.813rem;
+  color: #49627a;
+  margin-bottom: 10px;
+}
+main .new_inquiries_container #new_inquiries_frm fieldset .precautions ul li {
+  color: #707070;
+  font-size: 0.75rem;
+  margin-bottom: 5px;
+}/*# sourceMappingURL=service_inquiry.css.map */

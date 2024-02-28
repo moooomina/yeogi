@@ -1,0 +1,23 @@
+
+
+@media screen and (max-width:1399px){
+    #open_map_btn {font-size: 0.875rem;}
+}
+@media screen and (max-width:1200px){
+    body {max-width: 1200px;}
+    /* .map_container .prev #open_map_btn {font-size: 0.75rem !important; bottom:35% !important;} */
+    #result_frm .result .filter_container {margin-right: 40px;}
+}
+@media screen and (max-width:900px){
+    body {max-width: 900px;}
+    .filter_container {display: none; margin: 0 !important;}
+    #room_container {width: 100% !important;}
+    .result {flex-flow: column wrap;}
+    .room .title {font-size: 1rem;}
+    .theme_keyword {display: none;}
+}
+@media screen and (max-width:600px){
+    body {max-width: 600px;}
+    
+}
+

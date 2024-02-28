@@ -1,0 +1,642 @@
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+main section {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+main section #result_frm .search_top {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+main section #result_frm .search_top h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+main section #result_frm .search_top .filter {
+  position: relative;
+}
+main section #result_frm .search_top .filter .now, main section #result_frm .search_top .filter .result #room_container .page_wrap .page .room .contents .price_info .price .now .won, main section #result_frm .result #room_container .page_wrap .page .room .contents .price_info .price .now .search_top .filter .won, main section #result_frm .search_top .filter .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .price_info .price .now .won, main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .price_info .price .now .search_top .filter .won {
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+main section #result_frm .search_top .filter .now i[class*=arrow], main section #result_frm .search_top .filter .result #room_container .page_wrap .page .room .contents .price_info .price .now .won i[class*=arrow], main section #result_frm .result #room_container .page_wrap .page .room .contents .price_info .price .now .search_top .filter .won i[class*=arrow], main section #result_frm .search_top .filter .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .price_info .price .now .won i[class*=arrow], main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .price_info .price .now .search_top .filter .won i[class*=arrow] {
+  margin-right: 10px;
+}
+main section #result_frm .search_top .filter .now:hover, main section #result_frm .search_top .filter .result #room_container .page_wrap .page .room .contents .price_info .price .now .won:hover, main section #result_frm .result #room_container .page_wrap .page .room .contents .price_info .price .now .search_top .filter .won:hover, main section #result_frm .search_top .filter .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .price_info .price .now .won:hover, main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .price_info .price .now .search_top .filter .won:hover {
+  color: #A2A4A2;
+  text-decoration: underline;
+}
+main section #result_frm .search_top .filter .open {
+  position: absolute;
+  right: 0;
+  top: 23px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 5px 20px;
+}
+main section #result_frm {width: 100%;}
+main section #result_frm .search_top .filter .open button {
+  width: 150px;
+  padding: 10px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+main section #result_frm .search_top .filter .open button span {
+  display: block;
+  font-size: 0.875rem;
+}
+main section #result_frm .search_top .filter .open button i[class$=check] {
+  display: none;
+}
+main section #result_frm .search_top .filter .open .active span {
+  color: #1273e4;
+}
+main section #result_frm .search_top .filter .open .active i[class$=check] {
+  color: #1273e4;
+  display: block;
+}
+main section #result_frm .result {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+main section #result_frm .result input {
+  display: none;
+}
+main section #result_frm .result .filter_container {
+  width: calc(25% - 20px); margin-right: 50px;
+}
+main section #result_frm .result .filter_container div h3 {
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+main section #result_frm .result .filter_container div .contents {
+  font-size: 0.938rem;
+}
+main section #result_frm .result .filter_container fieldset .top {
+  margin-bottom: 30px;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container {
+  margin-top: 25px;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .prev, main section #result_frm .result .filter_container fieldset .top .map_container .search_top .filter .now i[class*=arrow], main section #result_frm .result .filter_container fieldset .top .map_container .search_top .filter #room_container .page_wrap .page .room .contents .price_info .price .now .won i[class*=arrow], main section #result_frm .result #room_container .page_wrap .page .room .contents .price_info .price .now .filter_container fieldset .top .map_container .search_top .filter .won i[class*=arrow], main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container #room_container .page_wrap .page .room .contents .price_info .price .now .won .search_top .filter .won i[class*=arrow], main section #result_frm .result #room_container .page_wrap .page .filter_container fieldset .top .map_container .search_top .filter .open_wrap .open .contents .left .result_list .room_container .room .contents .price_info .price .now .won .won i[class*=arrow], main section #result_frm .result #room_container .page_wrap .page .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .price_info .price .now .won .search_top .filter .won i[class*=arrow], main section #result_frm .result .filter_container fieldset .top .map_container .search_top .filter .open_wrap .open .contents .left .result_list .room_container .room .contents .price_info .price .now .won i[class*=arrow], main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .price_info .price .now .search_top .filter .won i[class*=arrow], main section #result_frm .search_top .filter .now .result .filter_container fieldset .top .map_container i[class*=arrow], main section #result_frm .search_top .filter .result #room_container .page_wrap .page .room .contents .price_info .price .now .won .result .filter_container fieldset .top .map_container i[class*=arrow], main section #result_frm .result #room_container .page_wrap .page .room .contents .price_info .price .now .search_top .filter .won .result .filter_container fieldset .top .map_container i[class*=arrow], main section #result_frm .search_top .filter .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .price_info .price .now .won .result .filter_container fieldset .top .map_container i[class*=arrow] {
+  width: 100%; min-width: 230px;
+  /* height: auto; */
+  /* background-image: url(../images/search/thumbnail_map.74bb1588.png); */
+  /* background-size: contain; */
+  /* background-position: center; */
+  /* line-height: 190px; */
+  /* text-align: center; */
+  position: relative;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .prev img {
+  width: 100%; border-radius: 20px; display: block;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .prev #open_map_btn, main section #result_frm .result .filter_container fieldset .top .map_container .search_top .filter .now i[class*=arrow] #open_map_btn, main section #result_frm .result .filter_container fieldset .top .map_container .search_top .filter #room_container .page_wrap .page .room .contents .price_info .price .now .won i[class*=arrow] #open_map_btn, main section #result_frm .result #room_container .page_wrap .page .room .contents .price_info .price .now .filter_container fieldset .top .map_container .search_top .filter .won i[class*=arrow] #open_map_btn, main section #result_frm .result #room_container .page_wrap .page .filter_container fieldset .top .map_container .search_top .filter .open_wrap .open .contents .left .result_list .room_container .room .contents .price_info .price .now .won .won i[class*=arrow] #open_map_btn, main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .price_info .price .now .search_top .filter .won i[class*=arrow] #open_map_btn, main section #result_frm .search_top .filter .now .result .filter_container fieldset .top .map_container i[class*=arrow] #open_map_btn, main section #result_frm .search_top .filter .result #room_container .page_wrap .page .room .contents .price_info .price .now .won .result .filter_container fieldset .top .map_container i[class*=arrow] #open_map_btn, main section #result_frm .result #room_container .page_wrap .page .room .contents .price_info .price .now .search_top .filter .won .result .filter_container fieldset .top .map_container i[class*=arrow] #open_map_btn {
+  color: #ffffff;
+  background-color: #1273e4;
+  border-radius: 10px;
+  width: 40%;
+  padding: 2px 0;
+  line-height: 40px;
+  text-align: center;
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  position: absolute; left: 30%; bottom: 40%;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open {
+  width: 95%;
+  height: 90vh;
+  background-color: #ffffff;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .title {
+  padding-bottom: 20px;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .title #close_map_btn {
+  position: relative;
+  left: 20px;
+  top: 20px;
+  font-size: 25px;
+  cursor: pointer;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .title h1 {
+  text-align: center;
+  font-weight: 600;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open >.contents {
+  width: 100%;
+  display: flex;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left {
+  width: 35%;
+  display: flex;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter > div {
+  padding: 20px 0;
+  border-bottom: 1px solid #e9e9e9;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter {
+  width: 50%;
+  overflow-y: scroll;
+  padding: 0 20px;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .top {
+  border-bottom: 0;
+  padding-bottom: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .top h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .top .reset {
+  font-size: 0.875rem;
+  color: #d6d6d6;
+  cursor: default;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .top .reset i[class$=right] {
+  margin-right: 5px;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .top .active {
+  color: #333;
+  cursor: pointer;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .soldout {
+  transform: translateX(-7px);
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .type .contents label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .type .contents label span {
+  display: inline-block;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .type .contents label .circle {
+  border: 1px solid #999;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .type .contents label input[type=radio] {
+  display: none;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .type .contents label input:checked + .circle {
+  background-color: #1273e4;
+  border-color: #1273e4;
+  animation: popup 0.1s;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .price_range h3 span {
+  color: #999;
+  font-size: 0.75rem;
+  margin-left: 5px;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .taste .chk_wrap label span, main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .discount .chk_wrap label span, main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .rank .chk_wrap label span {
+  border: 1.5px solid #d9d9d9;
+  display: inline-block;
+  border-radius: 20px;
+  padding: 7px 16px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  font-size: 0.813rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .taste .chk_wrap label span:hover, main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .discount .chk_wrap label span:hover, main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .rank .chk_wrap label span:hover {
+  background-color: #F5F5F5;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .taste .chk_wrap label input[type=checkbox]:checked + span, main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .discount .chk_wrap label input[type=checkbox]:checked + span, main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .rank .chk_wrap label input[type=checkbox]:checked + span {
+  color: #1273e4;
+  border-color: #BAD7F6;
+  background-color: #F2F8FF;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .reservation div {
+  transform: translateX(-7px);
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .facility .contents dt {
+  color: #9aa9b8;
+  font-weight: 600;
+  font-size: 0.938rem;
+  margin-bottom: 10px;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .facility .contents dd {
+  margin-bottom: 20px;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .facility .contents dd label span {
+  border: 1.5px solid #d9d9d9;
+  display: inline-block;
+  border-radius: 20px;
+  padding: 7px 16px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  font-size: 0.813rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .facility .contents dd label span:hover {
+  background-color: #F5F5F5;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .facility .contents dd label input[type=checkbox]:checked + span {
+  color: #1273e4;
+  border-color: #BAD7F6;
+  background-color: #F2F8FF;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .open_filter .facility .contents dd dd:last-child {
+  margin-bottom: 0;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list {
+  width: 50%;
+  padding: 25px 20px;
+  overflow: auto;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list h2 {
+  font-size: 0.875rem;
+  margin-bottom: 20px;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 25px 0;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .photo {
+  width: calc(45% - 10px);
+  height: 230px;
+  border-radius: 20px;
+  background: url(../images/search/accommodation1.jpeg);
+  background-size: cover;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents {
+  width: calc(55% - 10px);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .title_wrap .type {
+  font-size: 0.688rem;
+  margin-bottom: 2px;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .title_wrap .title .name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .title_wrap .location {
+  margin-bottom: 3px;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .title_wrap .location .city {
+  font-size: 0.813rem;
+  color: #707070;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .title_wrap .location .more {
+  font-size: 0.813rem;
+  color: #999;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .title_wrap .review .point_wrap {
+  font-size: 0.75rem;
+  background-color: #ffad0a;
+  border-radius: 5px;
+  padding: 4px;
+  font-weight: 600;
+  display: inline-block;
+  margin-right: 3px;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .title_wrap .review .point_wrap .point_view {
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .title_wrap .review .point_wrap i[class$=star] {
+  font-size: 0.75rem;
+  margin-right: 3px;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .title_wrap .review .comment {
+  color: #707070;
+  font-size: 0.813rem;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .price_info {
+  text-align: right;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .price_info .coupon {
+  font-size: 0.813rem;
+  color: #999;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .price_info .price .origin {
+  display: block;
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.813rem;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .price_info .price .now, main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container #room_container .page_wrap .page .room .contents .price_info .price .now .won, main section #result_frm .result #room_container .page_wrap .page .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .price_info .price .now .won, main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .price_info .price .now .won {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .price_info .price .now .day, main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container #room_container .page_wrap .page .room .contents .price_info .price .now .won .day, main section #result_frm .result #room_container .page_wrap .page .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .price_info .price .now .won .day {
+  font-size: 0.813rem;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .left .result_list .room_container .room .contents .price_info .info {
+  margin-top: 5px;
+  color: #f45858;
+  font-size: 0.688rem;
+}
+main section #result_frm .result .filter_container fieldset .top .map_container .open_wrap .open .contents .big_map {
+  width: 100%; height:970px; 
+  background-color: lightcoral;
+}
+main section #result_frm .result .filter_container fieldset .filter > div {
+  padding: 20px 0;
+  border-bottom: 1px solid #e9e9e9;
+}
+main section #result_frm .result .filter_container fieldset .filter {
+  position: sticky;
+  top: 0;
+}
+main section #result_frm .result .filter_container fieldset .filter .top {
+  border-bottom: 0;
+  padding-bottom: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+main section #result_frm .result .filter_container fieldset .filter .top h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+main section #result_frm .result .filter_container fieldset .filter .top .reset {
+  font-size: 0.875rem;
+  color: #d6d6d6;
+  cursor: default;
+}
+main section #result_frm .result .filter_container fieldset .filter .top .reset i[class$=right] {
+  margin-right: 5px;
+}
+main section #result_frm .result .filter_container fieldset .filter .top .active {
+  color: #333;
+  cursor: pointer;
+}
+main section #result_frm .result .filter_container fieldset .filter .soldout {
+  transform: translateX(-7px);
+}
+main section #result_frm .result .filter_container fieldset .filter .type .contents label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+main section #result_frm .result .filter_container fieldset .filter .type .contents label span {
+  display: inline-block;
+}
+main section #result_frm .result .filter_container fieldset .filter .type .contents label .circle {
+  border: 1px solid #999;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+main section #result_frm .result .filter_container fieldset .filter .type .contents label input[type=radio] {
+  display: none;
+}
+main section #result_frm .result .filter_container fieldset .filter .type .contents label input:checked + .circle {
+  background-color: #1273e4;
+  border-color: #1273e4;
+  animation: popup 0.1s;
+}
+main section #result_frm .result .filter_container fieldset .filter .price_range h3 span {
+  color: #999;
+  font-size: 0.75rem;
+  margin-left: 5px;
+}
+main section #result_frm .result .filter_container fieldset .filter .taste .chk_wrap label span, main section #result_frm .result .filter_container fieldset .filter .discount .chk_wrap label span, main section #result_frm .result .filter_container fieldset .filter .rank .chk_wrap label {
+  border: 1.5px solid #d9d9d9;
+  display: inline-block;
+  border-radius: 20px;
+  padding: 7px 16px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  font-size: 0.813rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+main section #result_frm .result .filter_container fieldset .filter .taste .chk_wrap label span:hover, main section #result_frm .result .filter_container fieldset .filter .discount .chk_wrap label span:hover, main section #result_frm .result .filter_container fieldset .filter .rank .chk_wrap label:hover {
+  background-color: #F5F5F5;
+}
+main section #result_frm .result .filter_container fieldset .filter .taste .chk_wrap label input[type=checkbox]:checked + span, main section #result_frm .result .filter_container fieldset .filter .discount .chk_wrap label input[type=checkbox]:checked + span, main section #result_frm .result .filter_container fieldset .filter .rank .chk_wrap label input[type=checkbox]:checked + span {
+  color: #1273e4;
+  border-color: #BAD7F6;
+  background-color: #F2F8FF;
+}
+main section #result_frm .result .filter_container fieldset .filter .reservation div {
+  transform: translateX(-7px);
+}
+main section #result_frm .result .filter_container fieldset .filter .facility .contents dt {
+  color: #9aa9b8;
+  font-weight: 600;
+  font-size: 0.938rem;
+  margin-bottom: 10px;
+}
+main section #result_frm .result .filter_container fieldset .filter .facility .contents dd {
+  margin-bottom: 20px;
+}
+main section #result_frm .result .filter_container fieldset .filter .facility .contents dd label span {
+  border: 1.5px solid #d9d9d9;
+  display: inline-block;
+  border-radius: 20px;
+  padding: 7px 16px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  font-size: 0.813rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+main section #result_frm .result .filter_container fieldset .filter .facility .contents dd label span:hover {
+  background-color: #F5F5F5;
+}
+main section #result_frm .result .filter_container fieldset .filter .facility .contents dd label input[type=checkbox]:checked + span {
+  color: #1273e4;
+  border-color: #BAD7F6;
+  background-color: #F2F8FF;
+}
+main section #result_frm .result .filter_container fieldset .filter .facility .contents dd dd:last-child {
+  margin-bottom: 0;
+}
+main section #result_frm .result #room_container {
+  width: calc(75% - 20px);
+}
+main section #result_frm .result #room_container .page_wrap .page {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+main section #result_frm .result #room_container .page_wrap .page .room {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 25px 0;
+  border-bottom: 1px solid #eee;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .photo {
+  width: calc(45% - 10px);
+  height: 240px; overflow: hidden; border-radius: 20px;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .photo img {
+  width: 100%; height: 240px; 
+  object-fit: cover;
+  object-position: center;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .contents {
+  width: calc(55% - 10px);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .contents .title_wrap .type {
+  font-size: 0.688rem;
+  margin-bottom: 2px;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .contents .title_wrap .title .name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .contents .title_wrap .location {
+  margin-bottom: 3px;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .contents .title_wrap .location .city {
+  font-size: 0.813rem;
+  color: #707070;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .contents .title_wrap .location .more {
+  font-size: 0.813rem;
+  color: #999;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .contents .title_wrap .review .point_wrap {
+  font-size: 0.75rem;
+  background-color: #ffad0a;
+  border-radius: 5px;
+  padding: 4px 6px;
+  font-weight: 600;
+  display: inline-block;
+  margin-right: 3px;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .contents .title_wrap .review .point_wrap .point_view {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .contents .title_wrap .review .comment .review_count {
+  color: #707070;
+  font-size: 0.813rem;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .contents .title_wrap .review .point_wrap i[class$=star] {
+  font-size: 0.75rem;
+  margin-right: 3px;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .contents .title_wrap .review .comment {
+  color: #707070;
+  font-size: 0.813rem;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .contents .price_info {
+  text-align: right;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .contents .price_info .coupon {
+  font-size: 0.813rem;
+  color: #999;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .contents .price_info .price .origin {
+  display: block;
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.813rem;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .contents .price_info .price .origin .price_view {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.813rem;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .contents .price_info .price .now, main section #result_frm .result #room_container .page_wrap .page .room .contents .price_info .price .now .won {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .contents .price_info .price .now .day {
+  font-size: 0.813rem;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .contents .price_info .info {
+  margin-top: 5px;
+  color: #f45858;
+  font-size: 0.688rem;
+}
+main section #result_frm .result #room_container .page_wrap .page .room .contents .price_info .info span {
+  color: #f45858;
+  font-size: 0.688rem;
+}
+main section #result_frm .result #room_container .pagination {
+  background-color: chartreuse;
+}
+main section #result_frm .theme_keyword {
+  width: 100%;
+  margin-top: 60px;
+}
+main section #result_frm .theme_keyword dt {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+main section #result_frm .theme_keyword dd {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+main section #result_frm .theme_keyword dd a {
+  width: 25%;
+  margin-bottom: 15px;
+  color: #1273e4;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+main section #result_frm .m_map_btn_wrap {}
+main section #result_frm .m_map_btn_wrap .m_map_btn {}
+
+@keyframes popup {
+  0% {
+    scale: 0.2;
+  }
+  100% {
+    scale: 1;
+  }
+}/*# sourceMappingURL=search.css.map */

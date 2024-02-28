@@ -1,0 +1,86 @@
+@import 'common';
+
+main {
+    max-width: $desktop; margin: $margin0;
+    section {
+        width: 100%;
+        margin: $margin0;
+        padding: 20px 20px 100px;
+        .title {
+            width: 50%; margin: $margin0;
+            padding: 16px 0 20px;
+            h1 {
+                font-size: $title24; font-weight: $weight600;
+                color: #333333;
+                margin: 2px 0;
+            }
+            p {
+                font-size: $defalt16;
+                color: #999;
+            }
+        }
+        .contents {
+            .page_wrap {
+                .page {
+                    li {
+                        width: 50%; margin: $margin0;
+                        border-bottom: 1px solid #C2C2C2;
+                        padding: 20px 0;
+                        a {
+                            display: flex; justify-content: space-between;
+                            .left {
+                                display: flex; align-items: center;
+                                p {
+                                    font-size: 0.563rem;
+                                    color: $subColor-r;
+                                    padding: 1.5px 4px;
+                                    background: #FFEBEB;
+                                    width: max-content;
+                                }
+                                h1 {
+                                    font-size: $defalt16;
+                                    color: #333333;
+                                    padding-left: 20px;
+                                    font-weight: $weight500;
+                                }
+                            }
+                            .right {
+                                span {
+                                    font-size: 0.813rem;
+                                    color: #C2C2C2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .pagination {
+                @include flex-rncc;
+                margin: 35px 0;
+                #prev {
+                    font-size: 0.75rem;
+                    color: rgb(51, 51, 51);
+                    padding-right: 5px;
+                }
+                .num {
+                    display: flex;
+                    #number {
+                        font-size: $small12;
+                        padding: 0 10px;
+                    }
+                    .active {
+                        background: $mainColor-b;
+                        width: 32px; height: 32px;
+                        color: #fff;
+                        border-radius: 50%;
+                    }
+                }
+                #next {
+                    font-size: 0.75rem;
+                    color: rgb(51, 51, 51);
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+}

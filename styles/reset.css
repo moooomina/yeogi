@@ -1,0 +1,64 @@
+/* fonts */
+@font-face {
+    font-family:PretendardBlack; /* 내가 부를 이름 */
+    src: url(../fonts/Pretendard-Black.otf); /* 폰트경로 */
+}
+@font-face {
+    font-family:PretendardBold;
+    src: url(../fonts/Pretendard-Bold.otf);
+}
+@font-face {
+    font-family:PretendardExtraBold;
+    src: url(../fonts/Pretendard-ExtraBold.otf);
+}
+@font-face {
+    font-family:PretendardExtraLight;
+    src: url(../fonts/Pretendard-ExtraLight.otf);
+}
+@font-face {
+    font-family:PretendardLight;
+    src: url(../fonts/Pretendard-Light.otf);
+}
+@font-face {
+    font-family:PretendardMedium;
+    src: url(../fonts/Pretendard-Medium.otf);
+}
+@font-face {
+    font-family:PretendardRegular;
+    src: url(../fonts/Pretendard-Regular.otf);
+}
+@font-face {
+    font-family:PretendardSemiBold;
+    src: url(../fonts/Pretendard-SemiBold.otf);
+}
+@font-face {
+    font-family:PretendardThin;
+    src: url(../fonts/Pretendard-Thin.otf);
+}
+/* reset */
+html,body,* {box-sizing:border-box;}
+html,body,h1,h2,h3,h3,h4,h5,h6,
+p,em,strong,a,span,sup,sub,del,q,blockquote,code,
+ul,ol,li,dl,dt,dd,
+table,tr,td,th,thead,tbody,tfoot,
+form,fieldset,legend,input,select,option,button,label,textarea,
+header,main,footer,nav,section,article,figure,figcaption,aside,
+address,details,mark,time,video,img,summary,iframe,div {
+    margin:0; padding:0;
+    font-size:1.0rem; font-style:normal; font-weight:normal;
+    line-height:1.2; color:#333;
+    text-decoration:none;
+    font-family: PretendardRegular, 'Noto Sans KR', sans-serif;
+}
+ul,ol {list-style:none;}
+button {cursor:pointer;}
+table,tr,td,th {border-collapse:collapse;}
+/* html에서 의미적으로 존재하나 css디자인상에선 숨겨야하는 요소에 사용 */
+.skip {display:none;}
+/* font-awesom unicode 전용 클래스 */
+.fa {font-family:'Font Awesome 5 Free', 'Font Awesome 5 Brands'; font-weight:600;}
+/* form reset */
+fieldset {border:0;}
+select {outline:none; border:0; appearance:none; background:none;}
+button {border:0; cursor:pointer; background:none;}
+input {border:0; outline:none; background:none;}

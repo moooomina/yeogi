@@ -1,0 +1,102 @@
+@import 'common';
+
+main {
+    max-width:1400px; margin:0 auto;
+    text-align:center; padding:40px 0;
+    .trip_holic_bg {
+        width:60%; margin:0 auto;
+        img {
+            width:100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .trip_holic_notice {
+        width:60%; margin:0 auto;
+        background-color: #393939;
+        color: #fff;
+        font-size: 0.688rem;
+        padding:0 22px 22px 22px;
+        text-align: left;
+        p {
+            color: #fff;
+        }
+        li {
+            color: #fff;
+        }
+        .notice_top {
+            margin-bottom: 32px;
+            padding: 26px 8px;
+            border-bottom: 1px solid hsla(0,0%,100%,.15);
+            cursor: pointer;
+            label {
+                @include flex-rnfc;
+                img[src*=info] {
+                    width: 16px; height: 16px;
+                }
+                span {
+                    font-size: 1.3rem;
+                    padding: 2px 10px 0 5px;
+                    color: #fff;
+                }
+                #more_btn {
+                    > img {
+                        width: 16px; height: auto;
+                    }
+                }
+            }
+        }
+        .notice_more {
+            padding-bottom: 138px;
+            .box {
+                h1 {
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    text-align: left;
+                    margin:13px 0 8px;
+                    padding: 0 11px;
+                }
+                h1::before {
+                    content: '';
+                    display: block;
+                    width: 1px; height: 15px;
+                    background-color: #fff;
+                    margin-right: 3px;
+                }
+                h1::after {
+                    content: '';
+                    display: block;
+                    width: 1px; height: 15px;
+                    background-color: #fff;
+                    margin-left: 3px;
+                }
+                ul {
+                    margin: 11px 0 30px;
+                    position: relative;
+                    li {
+                        @include flex-rwff;
+                        color: #fff;
+                        text-align: left;
+                        margin-bottom: 5.5px;
+                        padding:0 11px ;
+                        ol {
+                            li {
+                                color: #fff;
+                            }
+                        }
+                        a {
+                            color: #fff;
+                        }
+                    }
+                    > li::before {
+                        content: '·';
+                        display: block;
+                        color: #fff;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

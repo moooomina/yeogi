@@ -1,0 +1,32 @@
+html * {transition: all 0.1s;}
+
+@media screen and (max-width:1399px){
+
+}
+@media screen and (max-width:1199px){
+    main section .raw_tab {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    main section .raw_tab h2 .raw_t {
+        text-align: center;
+        padding: 20px 0;
+        font-size: 0.875rem;
+    }
+}
+@media screen and (max-width:900px){
+    h2 a {font-size: 0.813rem;}
+    main section .raw_container .raw_c .title {
+        flex-flow: column wrap; align-items: flex-start; }
+    main section .raw_container .raw_c .title .right { text-align: center; width: 100%;}
+    main section .raw_container .raw_c .title .right .period {
+        width: 90%;
+    }
+}
+@media screen and (max-width:600px){
+    main section .raw_container .raw_c .contents li .prev h2,
+    main section .raw_container .raw_c .contents li .prev h2 span,
+    main section .raw_container .raw_c .contents li .prev p i {font-size: 0.938rem;}
+    main section .contents li .open {font-size: 0.875rem;}
+}

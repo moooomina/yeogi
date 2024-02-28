@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <title>숙소 검색 결과 - 여행할 때 여기어때</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/search.css">
+    <link rel="stylesheet" href="./styles/responsible_search.css">
+    <link rel="stylesheet" href="./styles/checkbox.css">
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=r85p85z8hp"></script>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
+    <style>
+        .hide {display: none;}
+        /* html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+        swiper-slide {
+            display: flex; flex-flow: column nowrap;
+            justify-content: flex-start;
+        }
+        swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .room {position: relative;}
+        .swiper-pagination {
+            position: absolute; left: 0; right: 0;
+        } */
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <form action="#" method="get" id="result_frm">
+                <div class="search_top">
+                    <h1>경주 숙소 261개</h1><!-- js -->
+                    <div class="filter">
+                        <p class="now"><i class="fa-solid fa-arrow-right-arrow-left fa-rotate-90"></i><span>추천순</span></p>
+                        <div class="open">
+                            <button type="button" class="active"><span>추천순</span><i class="fa-solid fa-check"></i></button>
+                            <button type="button"><span>평점높은순</span><i class="fa-solid fa-check"></i></button>
+                            <button type="button"><span>리뷰많은순</span><i class="fa-solid fa-check"></i></button>
+                            <button type="button"><span>낮은가격순</span><i class="fa-solid fa-check"></i></button>
+                            <button type="button"><span>높은가격순</span><i class="fa-solid fa-check"></i></button>
+                            <button type="button"><span>거리순</span><i class="fa-solid fa-check"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="result">
+                    <!-- 상단 좌측 필터 -->
+                    <div class="filter_container">
+                        <fieldset>
+                            <legend class="skip">숙소 검색 필터</legend>
+                            <div class="top">
+                                <div class="map_container">
+                                    <div class="prev"><img src="./images/search/thumbnail_map.74bb1588.png" alt=""><a href="#" id="open_map_btn">지도 보기</a></div>
+                                    <div class="open_wrap">
+                                        <div class="open">
+                                            <div class="title">
+                                                <p id="close_map_btn"><i class="fa-solid fa-xmark"></i></p>
+                                                <h1>지도</h1>
+                                            </div>
+                                            <div class="contents">
+                                                <div class="left">
+                                                    <div id="map_filter" class="open_filter"></div>
+                                                    <div class="map_room_container">
+                                                        <h2>경주 숙소 검색 결과</h2>
+                                                        <div id="map_room_result">
+                                                            <a href="#" class="room">
+                                                                <div class="photo"></div>
+                                                                <div class="contents">
+                                                                    <div class="title_wrap">
+                                                                        <p class="type">호텔</p>
+                                                                        <h2 class="title"><em class="speical"><!-- js ★파격특가★ --></em><span class="name">세인트존스 호텔</span></h2>
+                                                                        <p class="location">
+                                                                            <span class="city">강릉시</span>
+                                                                            <span class="more">강릉 강문해변 앞</span>
+                                                                        </p>
+                                                                        <p class="review">
+                                                                            <span class="point_wrap"><i class="fa-solid fa-star"></i>9.0</span>
+                                                                            <span class="comment">
+                                                                                6,233명 평가
+                                                                            </span>
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="price_info">
+                                                                        <p class="price">
+                                                                            <del class="origin">352,000원</del>
+                                                                            <span class="coupon">쿠폰 적용시</span>
+                                                                            <em class="now">159,000<span class="won">원</span><span class="day">/1박</span></em>
+                                                                        </p>
+                                                                        <p class="info">이 가격으로 남은 객실 1개</p>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="big_map" id="map">
+                                                    <!-- 지도 API 사용 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="main_filter" class="open_filter">
+                            </div>
+                            <template id="filter_template">
+                                <div class="top">
+                                    <h2>필터</h2>
+                                    <a href="#" class="reset"><i class="fa-solid fa-rotate-right"></i>초기화</a>
+                                </div>
+                                <div class="soldout">
+                                    <div class="checkbox-wrapper-4">
+                                        <input class="inp-cbx chk" id="soldout_chk_open" type="checkbox"/>
+                                        <label class="cbx" for="soldout_chk_open">
+                                            <span>
+                                                <svg width="12px" height="10px">
+                                                    <use xlink:href="#check-4"></use>
+                                                </svg>
+                                            </span>
+                                            <span>매진 숙소 제외</span>
+                                        </label>
+                                        <svg class="inline-svg">
+                                            <symbol id="check-4" viewbox="0 0 12 10">
+                                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                            </symbol>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="type">
+                                    <h3>숙소유형</h3>
+                                    <div class="contents" id="type_list">
+                                    </div>
+                                    <template id="type_template"><label><input type="radio" name="type" class="chk" value="{{type_name}}"><span class="circle"></span>{{type_name}}</label></template>
+                                </div>
+                                <div class="price_range">
+                                    <h3>가격<span>1박 기준</span></h3>
+                                </div>
+                                <div class="taste">
+                                    <h3>#취향</h3>
+                                    <div class="chk_wrap" id="tag_list">
+                                    </div>
+                                    <template id="tag_template"><label><input type="checkbox" name="user_tag" class="user_tag chk" value="{{tag_name}}">{{tag_name}}</label></template>
+                                </div>
+                                <div class="discount">
+                                    <h3>할인혜택</h3>
+                                    <div class="chk_wrap" id="discount_list">
+                                    </div>
+                                    <template id="discount_template"><label><input type="checkbox" name="discount" class="discount_chk chk" value="{{discount_name}}">{{discount_name}}</label></template>
+                                </div>
+                                <div class="reservation">
+                                    <h3>예약유형</h3>
+                                    <div class="checkbox-wrapper-4">
+                                        <input class="inp-cbx chk" id="reservaiton_type_open" type="checkbox"/>
+                                        <label class="cbx chk" for="reservaiton_type_open">
+                                            <span>
+                                                <svg width="12px" height="10px">
+                                                    <use xlink:href="#check-4"></use>
+                                                </svg>
+                                            </span>
+                                            <span>대실 예약</span>
+                                        </label>
+                                        <svg class="inline-svg">
+                                            <symbol id="check-4" viewbox="0 0 12 10">
+                                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                            </symbol>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="rank">
+                                    <h3>등급</h3>
+                                    <div class="chk_wrap" id="rank_list">
+                                    </div>
+                                    <template id="rank_template"><label><input type="checkbox" name="rank" class="rank_chk chk" value="{{rank_name}}"><span>{{rank_name}}</span></label></template>
+                                </div>
+                                <div class="facility">
+                                    <h3>시설</h3>
+                                    <dl class="contents">
+                                        <dt>공용시설</dt>
+                                        <dd class="public" id="public_list">
+                                        </dd>
+                                        <template id="public_template"><label><input type="checkbox" name="public_facility" class="public_chk chk" value="{{public_name}}"><span>{{public_name}}</span></label></template>
+                                        <dt>객실 내 시설</dt>
+                                        <dd class="inside" id="inside_list">
+                                        </dd>
+                                        <template id="inside_template"><label><input type="checkbox" name="inside_facility" class="inside_chk chk" value="{{inside_name}}"><span>{{inside_name}}</span></label></template>
+                                        <dt>기타시설</dt>
+                                        <dd class="etc" id="etc_list">
+                                        </dd>
+                                        <template id="etc_template"><label><input type="checkbox" name="ect_facility" class="ect_chk chk" value="{{etc_name}}"><span>{{etc_name}}</span></label></template>
+                                    </dl>
+                                </div>
+                            </template>    
+                        </fieldset>
+                    </div>
+                    <!-- 상단 우측 결과 숙소 리스트 -->
+                    <div id="room_container" class="down">
+                        <swiper-container class="mySwiper page_wrap" init="false"><!-- 페이지 1 -->
+                            <swiper-slide class="page">
+                                <!-- js / 한 페이지에 room 20개 배치 -->
+                            </swiper-slide>
+                            <template id="room_template">
+                                <a href="./detail.html" class="room">
+                                    <div class="photo"><img src="./images/search/accommodation1.jpeg" alt=""></div>
+                                    <div class="contents">
+                                        <div class="title_wrap">
+                                            <p class="type">숙소타입</p>
+                                            <h2 class="title"><em class="speical"><!-- js ★파격특가★ --></em><span class="name">이름</span></h2>
+                                            <p class="location">
+                                                <span class="city">도시</span>
+                                                <span class="more">위치</span>
+                                            </p>
+                                            <p class="review">
+                                                <span class="point_wrap"><i class="fa-solid fa-star"></i><span class="point_view">9.0</span></span>
+                                                <span class="comment">
+                                                    <span class="review_count">1234</span>명 평가
+                                                </span>
+                                            </p> 
+                                        </div>
+                                        <div class="price_info">
+                                            <p class="price">
+                                                <del class="origin"><span class="price_view">352,000</span>원</del>
+                                                <span class="coupon">쿠폰 적용시</span>
+                                                <em class="now">159,000<span class="day">/1박</span></em>
+                                            </p>
+                                            <p class="info">이 가격으로 남은 객실 <span>1</span>개</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </template>
+                            <!-- <swiper-slide>임시페이지 2</swiper-slide>
+                            <swiper-slide>임시페이지 3</swiper-slide>
+                            <swiper-slide>임시페이지 4</swiper-slide>
+                            <swiper-slide>임시페이지 5</swiper-slide> -->
+                            <!-- js / 페이지 5개이상 추가 -->
+                        </swiper-container>
+                    </div>
+                </div>
+                <div class="m_map_btn_wrap">
+                    <button type="button" class="m_map_btn">지도 보기</button>
+                </div>
+                <dl class="theme_keyword">
+                    <dt>경주 테마별 숙소</dt>
+                    <dd class="theme">
+                        <a href="#">풀빌라</a>
+                        <a href="#">조식포함</a>
+                        <a href="#">할인특가</a>
+                        <a href="#">가성비숙소</a>
+                        <a href="#">쿠폰할인</a>
+                        <a href="#">5성급</a>
+                        <a href="#">블랙</a>
+                        <a href="#">반려견</a>
+                    </dd>
+                    <dt>경주 검색 키워드</dt><!-- js 지역명은 검색한 곳으로 -->
+                    <dd class="keyword">
+                        <a href="#">료칸</a>
+                        <a href="#">풀빌라</a>
+                        <a href="#">글램핑</a>
+                        <a href="#">스파</a>
+                        <a href="#">감포</a>
+                        <a href="#">황리단길</a>
+                        <a href="#">키즈펜션</a>
+                        <a href="#">애견동반</a>
+                    </dd>
+                </dl>
+            </form>
+        </section>
+    </main>
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> -->
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID&callback=initMap"></script>
+    <!-- <script src="./data/data.js" type="module"></script> -->
+    <script src="./script/search.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+html * {transition: all 0.1s;}
+
+/* body, html {max-width:1400px;} */
+
+@media screen and (max-width:1399px){
+
+}
+@media screen and (max-width:1199px){
+    /* section {width: 70% !important; } */
+}
+@media screen and (max-width:900px){
+    .left h1 {padding-left: 0 !important;}
+    li a {flex-flow: column nowrap; justify-content: flex-start;}
+    a .left {flex-flow: column nowrap; justify-content: flex-start; align-items: stretch !important;}
+}
+@media screen and (max-width:600px){
+}

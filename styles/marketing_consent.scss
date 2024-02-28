@@ -1,0 +1,58 @@
+@import 'common';
+
+main {
+    .container {
+        margin:  36px auto 96px;
+        max-width: 588px; height: 396px;
+        h1 {
+            font-size: $title24;
+            margin: 16px 0;
+            font-weight: $weight700;
+        }
+        .contents {
+            color: #707070;
+            margin-bottom: 10px;
+            line-height: 24px;
+        }
+        ul {
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: #f5f7fa;
+            padding: 16px 20px 12px 20px;
+            li {
+                position: relative;
+                padding: 0 0 8px 12px ;
+                color: #999;
+                font-size: $small12;
+                line-height: 16px;
+                em {
+                    color: #999;
+                    font-size: $small12;
+                    line-height: 16px;
+                    font-weight: bold;
+                }
+            }
+            li::before {
+                position: absolute; left: 0;
+                content: '•'; display: block;
+                color: #9aa9b8; width: 3px; height: 3px;
+                padding-right: 20px;
+            }
+        }
+    }
+}
+@media screen and (max-width:1199px) {
+    main {
+        max-width: $notebook;
+    }
+}
+@media screen and (max-width:899px) {
+    main {
+        max-width: $tablet;
+    }
+}
+@media screen and (max-width:599px) {
+    main {
+        max-width: $phone;
+    }
+}
